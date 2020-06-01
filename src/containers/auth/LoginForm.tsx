@@ -1,15 +1,18 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import { useRecoilState } from 'recoil';
+import { useRecoilState, useSetRecoilState } from 'recoil';
 import { useHistory } from 'react-router-dom';
 import AuthForm, { AuthFormType } from '../../components/auth/AuthForm';
 import { loginFormState, LoginFormInitState } from './atoms';
 import useRequest from '../../lib/hooks/useRequest';
 import { loginAPI } from '../../lib/apis/auth';
+import { userState } from '../../shared/user';
+import { saveUserData } from '../../lib/utils';
 
 interface LoginFormProps {}
 const LoginForm: React.FC<LoginFormProps> = () => {
   const history = useHistory();
   const [form, setForm] = useRecoilState(loginFormState);
+  const setUserData = useSetRecoilState(userState);
   const [error, setError] = useState<null | string>(null);
   const [_login, _, userData, userError] = useRequest(loginAPI);
 
@@ -31,8 +34,14 @@ const LoginForm: React.FC<LoginFormProps> = () => {
 
   useEffect(() => {
     if (userData) {
+      setUserData((oldUserData) => ({
+        ...oldUserData,
+        ...userData,
+      }));
+      saveUserData(userData);
       history.push('/');
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [history, userData]);
 
   useEffect(() => {

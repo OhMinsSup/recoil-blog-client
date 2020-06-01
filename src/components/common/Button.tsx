@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 interface ButtonStyledProps {
   cyan?: boolean;
-  fullWidth?: boolean;
+  fullwidth?: boolean;
 }
 
 const buttonStyle = css<ButtonStyledProps>`
@@ -22,7 +22,7 @@ const buttonStyle = css<ButtonStyledProps>`
     background: ${palette.gray[6]};
   }
   ${(props) =>
-    props.fullWidth &&
+    props.fullwidth &&
     css`
       padding-top: 0.75rem;
       padding-bottom: 0.75rem;
@@ -63,7 +63,7 @@ const Button: React.FC<ButtonProps> = (props) => {
       {...props}
       to={props.to}
       cyan={props.cyan}
-      fullWidth={props.fullWidth}
+      fullwidth={props.fullwidth}
     />
   ) : (
     <StyledButton {...props} />

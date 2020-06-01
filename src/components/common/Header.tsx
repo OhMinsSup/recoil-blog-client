@@ -16,16 +16,16 @@ const Header: React.FC<HeaderProps> = ({ user, onLogout }) => {
           <Link to="/" className="logo">
             REACTERS
           </Link>
-          {user ? (
-            <div className="right">
-              <UserInfo>{user.username}</UserInfo>
-              <Button onClick={onLogout}>로그아웃</Button>
-            </div>
-          ) : (
-            <div className="right">
+          <div className="right">
+            {user ? (
+              <React.Fragment>
+                <UserInfo>{user.username}</UserInfo>
+                <Button onClick={onLogout}>로그아웃</Button>
+              </React.Fragment>
+            ) : (
               <Button to="/login">로그인</Button>
-            </div>
-          )}
+            )}
+          </div>
         </Wrapper>
       </HeaderBlock>
       <Spacer />

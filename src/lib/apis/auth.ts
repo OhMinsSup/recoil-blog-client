@@ -17,5 +17,7 @@ export const registerAPI = (username: string, password: string) =>
     password,
   });
 
+export const logoutAPI = () => apiClient.post('/api/v1.0/auth/logout');
+
 export const checkAPI = () =>
   apiClient.get<AuthPayloadResponse>('/api/v1.0/auth/check');

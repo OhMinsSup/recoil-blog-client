@@ -3,4 +3,9 @@ export const RECOIL_KEY = {
   AUTH_REGISTER_FROM_KEY: 'auth/AUTH_REGISTER_FROM_KEY',
   AUTH_LOGIN: 'auth/AUTH_LOGIN',
   AUTH_REGISTER: 'auth/AUTH_REGISTER',
+  USER_DATA: 'user/USER_DATA',
+};
+
+export const STORAGE_KEY = {
+  BLOG_USER_DATA: '@@blog/user',
 };

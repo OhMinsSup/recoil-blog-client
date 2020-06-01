@@ -65,7 +65,7 @@ const AuthForm: React.FC<AuthFormProps> = ({
           />
         )}
         {error && <ErrorMessage>{error}</ErrorMessage>}
-        <Button cyan fullWidth>
+        <Button cyan fullwidth={true}>
           {title}
         </Button>
       </form>
