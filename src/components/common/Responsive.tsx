@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 interface ResponsiveProps {}
 const Responsive: React.FC<ResponsiveProps> = ({ children, ...rest }) => {
