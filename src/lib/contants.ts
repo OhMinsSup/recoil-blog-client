@@ -4,6 +4,9 @@ export const RECOIL_KEY = {
   AUTH_LOGIN: 'auth/AUTH_LOGIN',
   AUTH_REGISTER: 'auth/AUTH_REGISTER',
   USER_DATA: 'user/USER_DATA',
+  EDITOR_DATA: 'write/EDITOR_DATA',
+  EDITOR_TAGS_DATA: 'write/EDITOR_TAGS_DATA',
+  EDITOR_FULL_DATA: 'write/EDITOR_FULL_DATA',
 };
 
 export const STORAGE_KEY = {
