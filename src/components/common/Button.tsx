@@ -55,6 +55,7 @@ const StyledLink = styled(Link)<ButtonStyledProps>`
 interface ButtonProps extends ButtonStyledProps {
   to?: string;
   onClick?: any;
+  disabled?: boolean;
 }
 
 const Button: React.FC<ButtonProps> = (props) => {
