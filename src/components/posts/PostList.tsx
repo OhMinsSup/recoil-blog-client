@@ -1,14 +1,19 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+
 import Responsive from '../common/Responsive';
 import Button from '../common/Button';
-import palette from '../../lib/styles/palette';
 import SubInfo from '../common/SubInfo';
 import Tags from '../common/Tags';
 
+import { UserData } from '../../shared/user';
+import { PostData } from '../../shared/post';
+
+import palette from '../../lib/styles/palette';
+
 interface PostItemProps {
-  post: any;
+  post: PostData;
 }
 const PostItem: React.FC<PostItemProps> = ({ post }) => {
   const { publishedDate, user, tags, title, body, _id } = post;
@@ -29,22 +34,10 @@ const PostItem: React.FC<PostItemProps> = ({ post }) => {
 };
 
 interface PostListProps {
-  posts: any[];
-  loading: boolean;
-  error: any;
-  showWriteButton: React.ReactNode;
+  posts: PostData[];
+  showWriteButton: UserData | null;
 }
-const PostList: React.FC<PostListProps> = ({
-  posts,
-  loading,
-  error,
-  showWriteButton,
-}) => {
-  // 에러 발생 시
-  if (error) {
-    return <PostListBlock>에러가 발생했습니다.</PostListBlock>;
-  }
-
+const PostList: React.FC<PostListProps> = ({ posts, showWriteButton }) => {
   return (
     <PostListBlock>
       <WritePostButtonWrapper>
@@ -55,13 +48,13 @@ const PostList: React.FC<PostListProps> = ({
         )}
       </WritePostButtonWrapper>
       {/*  로딩 중 아니고, 포스트 배열이 존재할 때만 보여줌 */}
-      {!loading && posts && (
+      {posts && posts.length > 0 ? (
         <div>
           {posts.map((post) => (
             <PostItem post={post} key={post._id} />
           ))}
         </div>
-      )}
+      ) : null}
     </PostListBlock>
   );
 };
