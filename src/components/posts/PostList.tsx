@@ -42,7 +42,7 @@ const PostList: React.FC<PostListProps> = ({ posts, showWriteButton }) => {
     <PostListBlock>
       <WritePostButtonWrapper>
         {showWriteButton && (
-          <Button cyan to="/write">
+          <Button cyan={true} to="/write">
             새 글 작성하기
           </Button>
         )}

@@ -2,17 +2,17 @@ import apiClient from './apiClient';
 import { UserData } from '../../shared/user';
 
 export const loginAPI = (username: string, password: string) =>
-  apiClient.post<UserData>('/api/v1.0/auth/signin', {
+  apiClient.post<UserData>('/api/auth/login', {
     username,
     password,
   });
 
 export const registerAPI = (username: string, password: string) =>
-  apiClient.post<UserData>('/api/v1.0/auth/signup', {
+  apiClient.post<UserData>('/api/auth/register', {
     username,
     password,
   });
 
-export const logoutAPI = () => apiClient.post('/api/v1.0/auth/logout');
+export const logoutAPI = () => apiClient.post('/api/auth/logout');
 
-export const checkAPI = () => apiClient.get<UserData>('/api/v1.0/auth/check');
+export const checkAPI = () => apiClient.get<UserData>('/api/auth/check');

@@ -1,20 +1,23 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import "./index.css";
-import App from "./App";
-import { RecoilRoot } from "recoil";
-import { BrowserRouter } from "react-router-dom";
-import * as serviceWorker from "./serviceWorker";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
+import { RecoilRoot } from 'recoil';
+import { BrowserRouter } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
+import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
     <RecoilRoot>
       <BrowserRouter>
-        <App />
+        <HelmetProvider>
+          <App />
+        </HelmetProvider>
       </BrowserRouter>
     </RecoilRoot>
   </React.StrictMode>,
-  document.getElementById("root"),
+  document.getElementById('root'),
 );
 
 // If you want your app to work offline and load faster, you can change

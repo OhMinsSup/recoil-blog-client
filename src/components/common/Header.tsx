@@ -1,11 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+
 import Responsive from './Responsive';
 import Button from './Button';
 
+import { UserData } from '../../shared/user';
+
 interface HeaderProps {
-  user: any;
+  user: UserData | null;
   onLogout: () => any;
 }
 const Header: React.FC<HeaderProps> = ({ user, onLogout }) => {

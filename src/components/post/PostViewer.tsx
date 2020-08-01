@@ -5,31 +5,14 @@ import palette from '../../lib/styles/palette';
 import Responsive from '../common/Responsive';
 import SubInfo from '../common/SubInfo';
 import Tags from '../common/Tags';
+import { PostData } from '../../shared/post';
 
 interface PostViewerProps {
-  post: any;
-  error: any;
-  loading: boolean;
+  post: PostData | null;
   actionButtons: React.ReactNode;
-  ownPost: boolean;
 }
-const PostViewer: React.FC<PostViewerProps> = ({
-  post,
-  error,
-  loading,
-  actionButtons,
-  ownPost,
-}) => {
-  // 에러 발생 시
-  if (error) {
-    if (error.response && error.response.status === 404) {
-      return <PostViewerBlock>존재하지 않는 포스트입니다.</PostViewerBlock>;
-    }
-    return <PostViewerBlock>오류 발생!</PostViewerBlock>;
-  }
-
-  // 로딩중이거나, 아직 포스트 데이터가 없을 시
-  if (loading || !post) {
+const PostViewer: React.FC<PostViewerProps> = ({ post, actionButtons }) => {
+  if (!post) {
     return null;
   }
 

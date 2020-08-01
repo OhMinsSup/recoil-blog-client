@@ -8,6 +8,13 @@ export type WritePostParams = {
   tags: string[];
 };
 
+export type UpdatePostParams = {
+  id: string;
+  title: string;
+  body: string;
+  tags: string[];
+};
+
 export type ListPostParams = {
   page: number;
   username?: string;
@@ -15,10 +22,10 @@ export type ListPostParams = {
 };
 
 export const writePostAPI = ({ title, body, tags }: WritePostParams) =>
-  apiClient.post<PostData>('/api/v1.0/posts', { title, body, tags });
+  apiClient.post<PostData>('/api/posts', { title, body, tags });
 
 export const readPostAPI = (id: string) =>
-  apiClient.get<PostData>(`/api/v1.0/posts/${id}`);
+  apiClient.get<PostData>(`/api/posts/${id}`);
 
 export const listPostsAPI = ({ page, username, tag }: ListPostParams) => {
   const queryString = qs.stringify({
@@ -27,5 +34,15 @@ export const listPostsAPI = ({ page, username, tag }: ListPostParams) => {
     tag,
   });
 
-  return apiClient.get<PostData[]>(`/api/v1.0/posts?${queryString}`);
+  return apiClient.get<PostData[]>(`/api/posts?${queryString}`);
 };
+
+export const removePostAPI = (id: string) =>
+  apiClient.delete(`/api/posts/${id}`);
+
+export const updatePostAPI = ({ id, title, body, tags }: UpdatePostParams) =>
+  apiClient.patch(`/api/posts/${id}`, {
+    title,
+    body,
+    tags,
+  });

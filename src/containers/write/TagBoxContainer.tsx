@@ -1,20 +1,25 @@
 import React, { useCallback } from 'react';
 import { useRecoilState } from 'recoil';
-import { editorTagsState } from './atoms';
+
+import { editorFormState } from './atoms';
+
 import TagBox from '../../components/write/TagBox';
 
 interface TagBoxContainerProps {}
 const TagBoxContainer: React.FC<TagBoxContainerProps> = () => {
-  const [tags, setTags] = useRecoilState(editorTagsState);
+  const [editor, setEditor] = useRecoilState(editorFormState);
 
   const onChangeTags = useCallback(
     (tags: string[]) => {
-      setTags(() => tags);
+      setEditor((oldEditor) => ({
+        ...oldEditor,
+        tags,
+      }));
     },
-    [setTags],
+    [setEditor],
   );
 
-  return <TagBox tags={tags} onChangeTags={onChangeTags} />;
+  return <TagBox tags={editor.tags} onChangeTags={onChangeTags} />;
 };
 
 export default TagBoxContainer;

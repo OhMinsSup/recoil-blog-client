@@ -1,30 +1,23 @@
-import { atom, selectorFamily } from 'recoil';
-import { RECOIL_KEY, STORAGE_KEY } from '../lib/contants';
+import { atom, selector } from 'recoil';
+import { RECOIL_KEY } from '../lib/contants';
+import { checkAPI } from '../lib/apis/auth';
 
 export interface UserData {
   _id: any;
   username: string;
 }
 
-export interface UserState {
-  user: UserData | null;
-  checkError: any;
-}
-
-export const userState = atom<UserState>({
+export const userState = atom<UserData | null>({
   key: RECOIL_KEY.USER_DATA,
-  default: {
-    user: null,
-    checkError: null,
-  },
+  default: null,
 });
 
-export const getUserInfoQuery = selectorFamily({
+export const userQuery = selector({
   key: RECOIL_KEY.USER_QUERY,
-  get: () => async () => {
+  get: async () => {
     try {
-      const user = localStorage.getItem(STORAGE_KEY.BLOG_USER_DATA);
-      if (!user) return;
+      const response = await checkAPI();
+      return response.data;
     } catch (e) {
       console.error(e);
       throw e;

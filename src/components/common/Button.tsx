@@ -4,9 +4,26 @@ import palette from '../../lib/styles/palette';
 import { Link } from 'react-router-dom';
 
 interface ButtonStyledProps {
-  cyan?: boolean;
+  cyan?: string | boolean;
   fullwidth?: boolean;
 }
+
+interface ButtonProps extends ButtonStyledProps {
+  to?: string;
+  cyan?: boolean;
+  disabled?: boolean;
+  onClick?: any;
+}
+
+const Button: React.FC<ButtonProps> = (props) => {
+  return props.to ? (
+    <StyledLink {...props} to={props.to} cyan={props.cyan ? 'true' : ''} />
+  ) : (
+    <StyledButton {...props} />
+  );
+};
+
+export default Button;
 
 const buttonStyle = css<ButtonStyledProps>`
   border: none;
@@ -51,24 +68,3 @@ const StyledButton = styled.button<ButtonStyledProps>`
 const StyledLink = styled(Link)<ButtonStyledProps>`
   ${buttonStyle}
 `;
-
-interface ButtonProps extends ButtonStyledProps {
-  to?: string;
-  onClick?: any;
-  disabled?: boolean;
-}
-
-const Button: React.FC<ButtonProps> = (props) => {
-  return props.to ? (
-    <StyledLink
-      {...props}
-      to={props.to}
-      cyan={props.cyan}
-      fullwidth={props.fullwidth}
-    />
-  ) : (
-    <StyledButton {...props} />
-  );
-};
-
-export default Button;

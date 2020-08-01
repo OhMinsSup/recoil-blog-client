@@ -4,7 +4,7 @@ import palette from '../../lib/styles/palette';
 import AskRemoveModal from './AskRemoveModal';
 
 interface PostActionButtonsProps {
-  onEdit: () => Promise<void>;
+  onEdit: () => void;
   onRemove: () => Promise<void>;
 }
 const PostActionButtons: React.FC<PostActionButtonsProps> = ({

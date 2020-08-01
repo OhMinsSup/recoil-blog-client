@@ -1,12 +1,14 @@
 import React, { useCallback, useEffect } from 'react';
 import { useRecoilState, useResetRecoilState } from 'recoil';
-import Editor from '../../components/write/Editor';
+
 import { editorFormState } from './atoms';
+
+import Editor from '../../components/write/Editor';
 
 interface EditorContainerProps {}
 const EditorContainer: React.FC<EditorContainerProps> = () => {
   const [editor, setEditor] = useRecoilState(editorFormState);
-  const resetEditor = useResetRecoilState(editorFormState);
+  const resetEditorForm = useResetRecoilState(editorFormState);
 
   const onChangeField = useCallback(
     ({ key, value }: { key: string; value: string }) => {
@@ -20,9 +22,10 @@ const EditorContainer: React.FC<EditorContainerProps> = () => {
 
   useEffect(() => {
     return () => {
-      resetEditor();
+      resetEditorForm();
     };
-  }, [resetEditor]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [resetEditorForm, setEditor]);
 
   return (
     <Editor

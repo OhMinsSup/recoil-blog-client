@@ -1,28 +1,51 @@
 import React, { useEffect } from 'react';
-import WriteActionButtons from '../../components/write/WriteActionButtons';
+import { useRecoilState } from 'recoil';
 import { useHistory } from 'react-router-dom';
+
+import { PostData, postState } from '../../shared/post';
+import { writePostAPI, updatePostAPI } from '../../lib/apis/post';
+import { editorFormState } from './atoms';
 import useRequest from '../../lib/hooks/useRequest';
-import { writePostAPI } from '../../lib/apis/post';
-import { fullEditorFormData } from './atoms';
-import { useRecoilValue } from 'recoil';
+
+import WriteActionButtons from '../../components/write/WriteActionButtons';
 
 interface WriteActionButtonsContainerProps {}
 const WriteActionButtonsContainer: React.FC<WriteActionButtonsContainerProps> = () => {
-  const postFormData = useRecoilValue(fullEditorFormData);
-  const [_writePost, _, postData] = useRequest(writePostAPI);
+  const [post] = useRecoilState(postState);
+  const [editor] = useRecoilState(editorFormState);
+  const [_writePost, _, createData] = useRequest(writePostAPI);
+  const [_updatePost, __, updateData] = useRequest(updatePostAPI);
+
   const history = useHistory();
 
   // 성공 혹은 실패시 할 작업
   useEffect(() => {
-    if (postData) {
+    const movePost = (postData: PostData) => {
       const { _id, user } = postData;
       history.push(`/@${user.username}/${_id}`);
+    };
+
+    if (createData) {
+      movePost(createData);
     }
-  }, [history, postData]);
+
+    if (updateData) {
+      movePost(updateData);
+    }
+  }, [history, createData, updateData]);
 
   // 포스트 등록
   const onPublish = () => {
-    _writePost(postFormData);
+    if (post) {
+      _updatePost({
+        id: post._id,
+        ...editor,
+      });
+      return;
+    }
+    _writePost({
+      ...editor,
+    });
   };
 
   // 취소

@@ -1,15 +1,13 @@
 import React from 'react';
 import Responsive from '../components/common/Responsive';
-import EditorContainer from '../containers/write/EditorContainer';
-import TagBoxContainer from '../containers/write/TagBoxContainer';
-import WriteActionButtonsContainer from '../containers/write/WriteActionButtonsContainer';
+import WriteContainer from '../containers/write/WriteContainer';
+import { RouteComponentProps } from 'react-router-dom';
 
-const WritePage = () => {
+interface WritePageProps extends RouteComponentProps<{ postId?: string }> {}
+const WritePage: React.FC<WritePageProps> = ({ match }) => {
   return (
     <Responsive>
-      <EditorContainer />
-      <TagBoxContainer />
-      <WriteActionButtonsContainer />
+      <WriteContainer match={match} />
     </Responsive>
   );
 };

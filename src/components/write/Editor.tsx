@@ -43,6 +43,13 @@ const Editor: React.FC<EditorProps> = ({ title, body, onChangeField }) => {
     }
   }, [onChangeField]);
 
+  const mounted = useRef(false);
+  useEffect(() => {
+    if (mounted.current) return;
+    mounted.current = true;
+    quillInstance.current!.root.innerHTML = body;
+  }, [body]);
+
   const onChangeTitle = useCallback(
     (e: React.ChangeEvent<HTMLInputElement>) => {
       onChangeField({ key: 'title', value: e.target.value });

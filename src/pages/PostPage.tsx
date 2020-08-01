@@ -1,10 +1,14 @@
 import React from 'react';
+import { RouteComponentProps } from 'react-router-dom';
 import HeaderContainer from '../containers/common/HeaderContainer';
+import PostViewerContainer from '../containers/post/PostViewerContainer';
 
-const PostPage = () => {
+interface PostPageProps extends RouteComponentProps<{ postId: string }> {}
+const PostPage: React.FC<PostPageProps> = ({ match }) => {
   return (
     <div>
       <HeaderContainer />
+      <PostViewerContainer match={match} />
     </div>
   );
 };

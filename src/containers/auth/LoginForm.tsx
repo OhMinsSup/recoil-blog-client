@@ -11,8 +11,10 @@ import { saveUserData } from '../../lib/utils';
 interface LoginFormProps {}
 const LoginForm: React.FC<LoginFormProps> = () => {
   const history = useHistory();
+
   const [form, setForm] = useRecoilState(loginFormState);
   const setUserData = useSetRecoilState(userState);
+
   const [error, setError] = useState<null | string>(null);
   const [_login, _, userData, userError] = useRequest(loginAPI);
 
