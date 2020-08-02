@@ -114,7 +114,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 28);
+/******/ 	return __webpack_require__(__webpack_require__.s = 30);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -133,7 +133,7 @@ module.exports = require("react-router-dom");
 /* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(27);
+module.exports = __webpack_require__(29);
 
 
 /***/ }),
@@ -222,7 +222,7 @@ var STORAGE_KEY = {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(21);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(23);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
  // const host =
 //   process.env.NODE_ENV === 'development'
@@ -459,6 +459,18 @@ function _unsupportedIterableToArray(o, minLen) {
 
 /***/ }),
 /* 19 */
+/***/ (function(module, exports) {
+
+module.exports = require("cookie-parser");
+
+/***/ }),
+/* 20 */
+/***/ (function(module, exports) {
+
+module.exports = require("express-http-proxy");
+
+/***/ }),
+/* 21 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -468,7 +480,7 @@ function _unsupportedIterableToArray(o, minLen) {
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_router_dom__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _loadable_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(5);
 /* harmony import */ var _loadable_component__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_loadable_component__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _containers_common_Core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(20);
+/* harmony import */ var _containers_common_Core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(22);
 
 
 
@@ -492,151 +504,7 @@ var PostListPage = _loadable_component__WEBPACK_IMPORTED_MODULE_2___default()({
     return false;
   },
   importAsync: function importAsync() {
-    return __webpack_require__.e(/* import() | pages-PostListPage */ 2).then(__webpack_require__.bind(null, 23));
-  },
-  requireAsync: function requireAsync(props) {
-    var _this = this;
-
-    var key = this.resolve(props);
-    this.resolved[key] = false;
-    return this.importAsync(props).then(function (resolved) {
-      _this.resolved[key] = true;
-      return resolved;
-    });
-  },
-  requireSync: function requireSync(props) {
-    var id = this.resolve(props);
-
-    if (true) {
-      return __webpack_require__(id);
-    }
-
-    return eval('module.require')(id);
-  },
-  resolve: function resolve() {
-    if (true) {
-      return /*require.resolve*/(23);
-    }
-
-    return eval('require.resolve')("./pages/PostListPage");
-  }
-});
-var PostPage = _loadable_component__WEBPACK_IMPORTED_MODULE_2___default()({
-  resolved: {},
-  chunkName: function chunkName() {
-    return "pages-PostPage";
-  },
-  isReady: function isReady(props) {
-    var key = this.resolve(props);
-
-    if (this.resolved[key] !== true) {
-      return false;
-    }
-
-    if (true) {
-      return !!__webpack_require__.m[key];
-    }
-
-    return false;
-  },
-  importAsync: function importAsync() {
-    return __webpack_require__.e(/* import() | pages-PostPage */ 3).then(__webpack_require__.bind(null, 24));
-  },
-  requireAsync: function requireAsync(props) {
-    var _this = this;
-
-    var key = this.resolve(props);
-    this.resolved[key] = false;
-    return this.importAsync(props).then(function (resolved) {
-      _this.resolved[key] = true;
-      return resolved;
-    });
-  },
-  requireSync: function requireSync(props) {
-    var id = this.resolve(props);
-
-    if (true) {
-      return __webpack_require__(id);
-    }
-
-    return eval('module.require')(id);
-  },
-  resolve: function resolve() {
-    if (true) {
-      return /*require.resolve*/(24);
-    }
-
-    return eval('require.resolve')("./pages/PostPage");
-  }
-});
-var WritePage = _loadable_component__WEBPACK_IMPORTED_MODULE_2___default()({
-  resolved: {},
-  chunkName: function chunkName() {
-    return "pages-WritePage";
-  },
-  isReady: function isReady(props) {
-    var key = this.resolve(props);
-
-    if (this.resolved[key] !== true) {
-      return false;
-    }
-
-    if (true) {
-      return !!__webpack_require__.m[key];
-    }
-
-    return false;
-  },
-  importAsync: function importAsync() {
-    return __webpack_require__.e(/* import() | pages-WritePage */ 5).then(__webpack_require__.bind(null, 22));
-  },
-  requireAsync: function requireAsync(props) {
-    var _this = this;
-
-    var key = this.resolve(props);
-    this.resolved[key] = false;
-    return this.importAsync(props).then(function (resolved) {
-      _this.resolved[key] = true;
-      return resolved;
-    });
-  },
-  requireSync: function requireSync(props) {
-    var id = this.resolve(props);
-
-    if (true) {
-      return __webpack_require__(id);
-    }
-
-    return eval('module.require')(id);
-  },
-  resolve: function resolve() {
-    if (true) {
-      return /*require.resolve*/(22);
-    }
-
-    return eval('require.resolve')("./pages/WritePage");
-  }
-});
-var LoginPage = _loadable_component__WEBPACK_IMPORTED_MODULE_2___default()({
-  resolved: {},
-  chunkName: function chunkName() {
-    return "pages-LoginPage";
-  },
-  isReady: function isReady(props) {
-    var key = this.resolve(props);
-
-    if (this.resolved[key] !== true) {
-      return false;
-    }
-
-    if (true) {
-      return !!__webpack_require__.m[key];
-    }
-
-    return false;
-  },
-  importAsync: function importAsync() {
-    return __webpack_require__.e(/* import() | pages-LoginPage */ 1).then(__webpack_require__.bind(null, 25));
+    return __webpack_require__.e(/* import() | pages-PostListPage */ 2).then(__webpack_require__.bind(null, 25));
   },
   requireAsync: function requireAsync(props) {
     var _this = this;
@@ -662,13 +530,13 @@ var LoginPage = _loadable_component__WEBPACK_IMPORTED_MODULE_2___default()({
       return /*require.resolve*/(25);
     }
 
-    return eval('require.resolve')("./pages/LoginPage");
+    return eval('require.resolve')("./pages/PostListPage");
   }
 });
-var RegisterPage = _loadable_component__WEBPACK_IMPORTED_MODULE_2___default()({
+var PostPage = _loadable_component__WEBPACK_IMPORTED_MODULE_2___default()({
   resolved: {},
   chunkName: function chunkName() {
-    return "pages-RegisterPage";
+    return "pages-PostPage";
   },
   isReady: function isReady(props) {
     var key = this.resolve(props);
@@ -684,7 +552,7 @@ var RegisterPage = _loadable_component__WEBPACK_IMPORTED_MODULE_2___default()({
     return false;
   },
   importAsync: function importAsync() {
-    return __webpack_require__.e(/* import() | pages-RegisterPage */ 4).then(__webpack_require__.bind(null, 26));
+    return __webpack_require__.e(/* import() | pages-PostPage */ 3).then(__webpack_require__.bind(null, 26));
   },
   requireAsync: function requireAsync(props) {
     var _this = this;
@@ -708,6 +576,150 @@ var RegisterPage = _loadable_component__WEBPACK_IMPORTED_MODULE_2___default()({
   resolve: function resolve() {
     if (true) {
       return /*require.resolve*/(26);
+    }
+
+    return eval('require.resolve')("./pages/PostPage");
+  }
+});
+var WritePage = _loadable_component__WEBPACK_IMPORTED_MODULE_2___default()({
+  resolved: {},
+  chunkName: function chunkName() {
+    return "pages-WritePage";
+  },
+  isReady: function isReady(props) {
+    var key = this.resolve(props);
+
+    if (this.resolved[key] !== true) {
+      return false;
+    }
+
+    if (true) {
+      return !!__webpack_require__.m[key];
+    }
+
+    return false;
+  },
+  importAsync: function importAsync() {
+    return __webpack_require__.e(/* import() | pages-WritePage */ 5).then(__webpack_require__.bind(null, 24));
+  },
+  requireAsync: function requireAsync(props) {
+    var _this = this;
+
+    var key = this.resolve(props);
+    this.resolved[key] = false;
+    return this.importAsync(props).then(function (resolved) {
+      _this.resolved[key] = true;
+      return resolved;
+    });
+  },
+  requireSync: function requireSync(props) {
+    var id = this.resolve(props);
+
+    if (true) {
+      return __webpack_require__(id);
+    }
+
+    return eval('module.require')(id);
+  },
+  resolve: function resolve() {
+    if (true) {
+      return /*require.resolve*/(24);
+    }
+
+    return eval('require.resolve')("./pages/WritePage");
+  }
+});
+var LoginPage = _loadable_component__WEBPACK_IMPORTED_MODULE_2___default()({
+  resolved: {},
+  chunkName: function chunkName() {
+    return "pages-LoginPage";
+  },
+  isReady: function isReady(props) {
+    var key = this.resolve(props);
+
+    if (this.resolved[key] !== true) {
+      return false;
+    }
+
+    if (true) {
+      return !!__webpack_require__.m[key];
+    }
+
+    return false;
+  },
+  importAsync: function importAsync() {
+    return __webpack_require__.e(/* import() | pages-LoginPage */ 1).then(__webpack_require__.bind(null, 27));
+  },
+  requireAsync: function requireAsync(props) {
+    var _this = this;
+
+    var key = this.resolve(props);
+    this.resolved[key] = false;
+    return this.importAsync(props).then(function (resolved) {
+      _this.resolved[key] = true;
+      return resolved;
+    });
+  },
+  requireSync: function requireSync(props) {
+    var id = this.resolve(props);
+
+    if (true) {
+      return __webpack_require__(id);
+    }
+
+    return eval('module.require')(id);
+  },
+  resolve: function resolve() {
+    if (true) {
+      return /*require.resolve*/(27);
+    }
+
+    return eval('require.resolve')("./pages/LoginPage");
+  }
+});
+var RegisterPage = _loadable_component__WEBPACK_IMPORTED_MODULE_2___default()({
+  resolved: {},
+  chunkName: function chunkName() {
+    return "pages-RegisterPage";
+  },
+  isReady: function isReady(props) {
+    var key = this.resolve(props);
+
+    if (this.resolved[key] !== true) {
+      return false;
+    }
+
+    if (true) {
+      return !!__webpack_require__.m[key];
+    }
+
+    return false;
+  },
+  importAsync: function importAsync() {
+    return __webpack_require__.e(/* import() | pages-RegisterPage */ 4).then(__webpack_require__.bind(null, 28));
+  },
+  requireAsync: function requireAsync(props) {
+    var _this = this;
+
+    var key = this.resolve(props);
+    this.resolved[key] = false;
+    return this.importAsync(props).then(function (resolved) {
+      _this.resolved[key] = true;
+      return resolved;
+    });
+  },
+  requireSync: function requireSync(props) {
+    var id = this.resolve(props);
+
+    if (true) {
+      return __webpack_require__(id);
+    }
+
+    return eval('module.require')(id);
+  },
+  resolve: function resolve() {
+    if (true) {
+      return /*require.resolve*/(28);
     }
 
     return eval('require.resolve')("./pages/RegisterPage");
@@ -741,7 +753,7 @@ function App() {
 /* harmony default export */ __webpack_exports__["a"] = (App);
 
 /***/ }),
-/* 20 */
+/* 22 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -780,24 +792,24 @@ var Core = function Core() {
 /* harmony default export */ __webpack_exports__["a"] = (Core);
 
 /***/ }),
-/* 21 */
+/* 23 */
 /***/ (function(module, exports) {
 
 module.exports = require("axios");
 
 /***/ }),
-/* 22 */,
-/* 23 */,
 /* 24 */,
 /* 25 */,
 /* 26 */,
-/* 27 */
+/* 27 */,
+/* 28 */,
+/* 29 */
 /***/ (function(module, exports) {
 
 module.exports = require("regenerator-runtime");
 
 /***/ }),
-/* 28 */
+/* 30 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -811,6 +823,14 @@ var external_express_default = /*#__PURE__*/__webpack_require__.n(external_expre
 // EXTERNAL MODULE: external "path"
 var external_path_ = __webpack_require__(8);
 var external_path_default = /*#__PURE__*/__webpack_require__.n(external_path_);
+
+// EXTERNAL MODULE: external "cookie-parser"
+var external_cookie_parser_ = __webpack_require__(19);
+var external_cookie_parser_default = /*#__PURE__*/__webpack_require__.n(external_cookie_parser_);
+
+// EXTERNAL MODULE: external "express-http-proxy"
+var external_express_http_proxy_ = __webpack_require__(20);
+var external_express_http_proxy_default = /*#__PURE__*/__webpack_require__.n(external_express_http_proxy_);
 
 // EXTERNAL MODULE: ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/regenerator/index.js
 var regenerator = __webpack_require__(2);
@@ -843,7 +863,7 @@ var external_styled_components_ = __webpack_require__(9);
 var external_react_helmet_async_ = __webpack_require__(17);
 
 // EXTERNAL MODULE: ./src/App.tsx
-var App = __webpack_require__(19);
+var App = __webpack_require__(21);
 
 // CONCATENATED MODULE: ./src/server/Html.tsx
 
@@ -891,6 +911,7 @@ var serverRender = /*#__PURE__*/function () {
         switch (_context.prev = _context.next) {
           case 0:
             url = _ref.url, loggedIn = _ref.loggedIn, cookie = _ref.cookie;
+            console.log(loggedIn, cookie);
             context = {};
             sheet = new external_styled_components_["ServerStyleSheet"]();
             extractor = new external_loadable_server_["ChunkExtractor"]({
@@ -925,7 +946,7 @@ var serverRender = /*#__PURE__*/function () {
               html: pageHtml
             });
 
-          case 12:
+          case 13:
           case "end":
             return _context.stop();
         }
@@ -954,9 +975,9 @@ var ssrMiddleware = /*#__PURE__*/function () {
             _context.prev = 0;
             _context.next = 3;
             return server_serverRender({
-              url: req.url // cookie: req.cookies,
-              // loggedIn: !!req.cookies['access_token'],
-
+              url: req.url,
+              cookie: req.cookies,
+              loggedIn: !!req.cookies['access_token']
             });
 
           case 3:
@@ -997,33 +1018,38 @@ var ssrMiddleware = /*#__PURE__*/function () {
 
 
 
+
+
 var app = external_express_default()();
+var proxyMiddleware = external_express_http_proxy_default()('localhost');
 var serve = external_express_default.a.static(external_path_default.a.resolve('./build'), {
   index: false // "/" 경로에서 index.html 을 보여주지 않도록 설정
 
 });
 app.use(serve); // 순서가 중요합니다. serverRender 전에 위치해야 합니다.
 
-app.use(server_ssrMiddleware); // 5000 포트로 서버를 가동합니다.
+app.use(external_cookie_parser_default()());
+app.use(server_ssrMiddleware);
+app.use(proxyMiddleware); // 5000 포트로 서버를 가동합니다.
 
 app.listen(5000, function () {
   console.log('SSR server is listening to http://localhost:5000');
 });
 
 /***/ }),
-/* 29 */
+/* 31 */
 /***/ (function(module, exports) {
 
 module.exports = require("qs");
 
 /***/ }),
-/* 30 */
+/* 32 */
 /***/ (function(module, exports) {
 
 module.exports = require("quill");
 
 /***/ }),
-/* 31 */
+/* 33 */
 /***/ (function(module, exports) {
 
 module.exports = require("quill/dist/quill.bubble.css");

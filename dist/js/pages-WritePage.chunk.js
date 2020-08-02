@@ -1,7 +1,7 @@
 exports.ids = [5];
 exports.modules = {
 
-/***/ 22:
+/***/ 24:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -13,7 +13,7 @@ var external_react_ = __webpack_require__(0);
 var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
 
 // EXTERNAL MODULE: ./src/components/common/Responsive.tsx + 2 modules
-var Responsive = __webpack_require__(37);
+var Responsive = __webpack_require__(39);
 
 // EXTERNAL MODULE: ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/slicedToArray.js + 3 modules
 var slicedToArray = __webpack_require__(14);
@@ -22,19 +22,19 @@ var slicedToArray = __webpack_require__(14);
 var external_recoil_ = __webpack_require__(3);
 
 // EXTERNAL MODULE: ./src/store/post.ts
-var store_post = __webpack_require__(40);
+var store_post = __webpack_require__(42);
 
 // EXTERNAL MODULE: ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/defineProperty.js
-var defineProperty = __webpack_require__(36);
+var defineProperty = __webpack_require__(38);
 
 // EXTERNAL MODULE: ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/objectSpread2.js
-var objectSpread2 = __webpack_require__(35);
+var objectSpread2 = __webpack_require__(37);
 
 // EXTERNAL MODULE: ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/taggedTemplateLiteral.js
-var taggedTemplateLiteral = __webpack_require__(32);
+var taggedTemplateLiteral = __webpack_require__(34);
 
 // EXTERNAL MODULE: external "quill"
-var external_quill_ = __webpack_require__(30);
+var external_quill_ = __webpack_require__(32);
 var external_quill_default = /*#__PURE__*/__webpack_require__.n(external_quill_);
 
 // EXTERNAL MODULE: external "styled-components"
@@ -42,10 +42,10 @@ var external_styled_components_ = __webpack_require__(9);
 var external_styled_components_default = /*#__PURE__*/__webpack_require__.n(external_styled_components_);
 
 // EXTERNAL MODULE: ./src/lib/styles/palette.ts
-var palette = __webpack_require__(33);
+var palette = __webpack_require__(35);
 
 // EXTERNAL MODULE: external "quill/dist/quill.bubble.css"
-var quill_bubble_css_ = __webpack_require__(31);
+var quill_bubble_css_ = __webpack_require__(33);
 
 // CONCATENATED MODULE: ./src/components/write/Editor.tsx
 
@@ -382,13 +382,13 @@ var TagBoxContainer_TagBoxContainer = function TagBoxContainer() {
 var external_react_router_dom_ = __webpack_require__(1);
 
 // EXTERNAL MODULE: ./src/lib/apis/post.ts
-var apis_post = __webpack_require__(39);
+var apis_post = __webpack_require__(41);
 
 // EXTERNAL MODULE: ./src/lib/hooks/useRequest.tsx
-var useRequest = __webpack_require__(38);
+var useRequest = __webpack_require__(40);
 
 // EXTERNAL MODULE: ./src/components/common/Button.tsx
-var Button = __webpack_require__(34);
+var Button = __webpack_require__(36);
 
 // CONCATENATED MODULE: ./src/components/write/WriteActionButtons.tsx
 
@@ -562,7 +562,7 @@ var WritePage_WritePage = function WritePage(_ref) {
 
 /***/ }),
 
-/***/ 32:
+/***/ 34:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -581,7 +581,7 @@ function _taggedTemplateLiteral(strings, raw) {
 
 /***/ }),
 
-/***/ 33:
+/***/ 35:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -593,16 +593,16 @@ var palette = {
 
 /***/ }),
 
-/***/ 34:
+/***/ 36:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var _Users_ominseob_Project_ReactProject_blog_blog_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(32);
+/* harmony import */ var _Users_ominseob_Project_ReactProject_blog_blog_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(34);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(0);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(9);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _lib_styles_palette__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(33);
+/* harmony import */ var _lib_styles_palette__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(35);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(1);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_router_dom__WEBPACK_IMPORTED_MODULE_4__);
 
@@ -680,12 +680,12 @@ var StyledLink = styled_components__WEBPACK_IMPORTED_MODULE_2___default()(react_
 
 /***/ }),
 
-/***/ 35:
+/***/ 37:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _objectSpread2; });
-/* harmony import */ var _defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(36);
+/* harmony import */ var _defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(38);
 
 
 function ownKeys(object, enumerableOnly) {
@@ -724,7 +724,7 @@ function _objectSpread2(target) {
 
 /***/ }),
 
-/***/ 36:
+/***/ 38:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -746,13 +746,13 @@ function _defineProperty(obj, key, value) {
 
 /***/ }),
 
-/***/ 37:
+/***/ 39:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 
 // EXTERNAL MODULE: ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/taggedTemplateLiteral.js
-var taggedTemplateLiteral = __webpack_require__(32);
+var taggedTemplateLiteral = __webpack_require__(34);
 
 // CONCATENATED MODULE: ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js
 function _objectWithoutPropertiesLoose(source, excluded) {
@@ -826,7 +826,7 @@ var ResponsiveBlock = external_styled_components_default.a.div(_templateObject()
 
 /***/ }),
 
-/***/ 38:
+/***/ 40:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -904,7 +904,7 @@ function useRequest(promiseCreator) {
 
 /***/ }),
 
-/***/ 39:
+/***/ 41:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -914,7 +914,7 @@ function useRequest(promiseCreator) {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return removePostAPI; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return updatePostAPI; });
 /* harmony import */ var _apiClient__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7);
-/* harmony import */ var qs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(29);
+/* harmony import */ var qs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(31);
 /* harmony import */ var qs__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(qs__WEBPACK_IMPORTED_MODULE_1__);
 
 
@@ -959,7 +959,7 @@ var updatePostAPI = function updatePostAPI(_ref3) {
 
 /***/ }),
 
-/***/ 40:
+/***/ 42:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -972,7 +972,7 @@ var updatePostAPI = function updatePostAPI(_ref3) {
 /* harmony import */ var recoil__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(3);
 /* harmony import */ var recoil__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(recoil__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _lib_contants__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(6);
-/* harmony import */ var _lib_apis_post__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(39);
+/* harmony import */ var _lib_apis_post__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(41);
 
 
 

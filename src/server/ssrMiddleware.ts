@@ -9,8 +9,8 @@ const ssrMiddleware = async (
   try {
     const result = await serverRender({
       url: req.url,
-      // cookie: req.cookies,
-      // loggedIn: !!req.cookies['access_token'],
+      cookie: req.cookies,
+      loggedIn: !!req.cookies['access_token'],
     });
 
     if (!result) {

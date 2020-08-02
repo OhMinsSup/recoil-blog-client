@@ -1,7 +1,7 @@
 exports.ids = [3];
 exports.modules = {
 
-/***/ 24:
+/***/ 26:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -13,7 +13,7 @@ var external_react_ = __webpack_require__(0);
 var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
 
 // EXTERNAL MODULE: ./src/containers/common/HeaderContainer.tsx + 1 modules
-var HeaderContainer = __webpack_require__(47);
+var HeaderContainer = __webpack_require__(49);
 
 // EXTERNAL MODULE: ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/regenerator/index.js
 var regenerator = __webpack_require__(2);
@@ -35,13 +35,13 @@ var external_recoil_ = __webpack_require__(3);
 var store_user = __webpack_require__(15);
 
 // EXTERNAL MODULE: ./src/store/post.ts
-var store_post = __webpack_require__(40);
+var store_post = __webpack_require__(42);
 
 // EXTERNAL MODULE: ./src/lib/apis/post.ts
-var apis_post = __webpack_require__(39);
+var apis_post = __webpack_require__(41);
 
 // EXTERNAL MODULE: ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/taggedTemplateLiteral.js
-var taggedTemplateLiteral = __webpack_require__(32);
+var taggedTemplateLiteral = __webpack_require__(34);
 
 // EXTERNAL MODULE: external "styled-components"
 var external_styled_components_ = __webpack_require__(9);
@@ -51,16 +51,16 @@ var external_styled_components_default = /*#__PURE__*/__webpack_require__.n(exte
 var external_react_helmet_async_ = __webpack_require__(17);
 
 // EXTERNAL MODULE: ./src/lib/styles/palette.ts
-var palette = __webpack_require__(33);
+var palette = __webpack_require__(35);
 
 // EXTERNAL MODULE: ./src/components/common/Responsive.tsx + 2 modules
-var Responsive = __webpack_require__(37);
+var Responsive = __webpack_require__(39);
 
 // EXTERNAL MODULE: ./src/components/common/SubInfo.tsx
-var SubInfo = __webpack_require__(41);
+var SubInfo = __webpack_require__(43);
 
 // EXTERNAL MODULE: ./src/components/common/Tags.tsx
-var Tags = __webpack_require__(42);
+var Tags = __webpack_require__(44);
 
 // CONCATENATED MODULE: ./src/components/post/PostViewer.tsx
 
@@ -157,7 +157,7 @@ var PostViewerError_PostViewerError = function PostViewerError() {
 /* harmony default export */ var post_PostViewerError = (PostViewerError_PostViewerError);
 var PostViewerError_PostViewerBlock = external_styled_components_default()(Responsive["a" /* default */])(PostViewerError_templateObject());
 // EXTERNAL MODULE: ./src/components/common/Button.tsx
-var Button = __webpack_require__(34);
+var Button = __webpack_require__(36);
 
 // CONCATENATED MODULE: ./src/components/common/AskModal.tsx
 
@@ -411,7 +411,7 @@ var PostPage_PostPage = function PostPage(_ref) {
 
 /***/ }),
 
-/***/ 32:
+/***/ 34:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -430,7 +430,7 @@ function _taggedTemplateLiteral(strings, raw) {
 
 /***/ }),
 
-/***/ 33:
+/***/ 35:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -442,16 +442,16 @@ var palette = {
 
 /***/ }),
 
-/***/ 34:
+/***/ 36:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var _Users_ominseob_Project_ReactProject_blog_blog_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(32);
+/* harmony import */ var _Users_ominseob_Project_ReactProject_blog_blog_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(34);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(0);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(9);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _lib_styles_palette__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(33);
+/* harmony import */ var _lib_styles_palette__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(35);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(1);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_router_dom__WEBPACK_IMPORTED_MODULE_4__);
 
@@ -529,13 +529,13 @@ var StyledLink = styled_components__WEBPACK_IMPORTED_MODULE_2___default()(react_
 
 /***/ }),
 
-/***/ 37:
+/***/ 39:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 
 // EXTERNAL MODULE: ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/taggedTemplateLiteral.js
-var taggedTemplateLiteral = __webpack_require__(32);
+var taggedTemplateLiteral = __webpack_require__(34);
 
 // CONCATENATED MODULE: ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js
 function _objectWithoutPropertiesLoose(source, excluded) {
@@ -609,7 +609,7 @@ var ResponsiveBlock = external_styled_components_default.a.div(_templateObject()
 
 /***/ }),
 
-/***/ 38:
+/***/ 40:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -687,7 +687,7 @@ function useRequest(promiseCreator) {
 
 /***/ }),
 
-/***/ 39:
+/***/ 41:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -697,7 +697,7 @@ function useRequest(promiseCreator) {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return removePostAPI; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return updatePostAPI; });
 /* harmony import */ var _apiClient__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7);
-/* harmony import */ var qs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(29);
+/* harmony import */ var qs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(31);
 /* harmony import */ var qs__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(qs__WEBPACK_IMPORTED_MODULE_1__);
 
 
@@ -742,7 +742,7 @@ var updatePostAPI = function updatePostAPI(_ref3) {
 
 /***/ }),
 
-/***/ 40:
+/***/ 42:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -755,7 +755,7 @@ var updatePostAPI = function updatePostAPI(_ref3) {
 /* harmony import */ var recoil__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(3);
 /* harmony import */ var recoil__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(recoil__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _lib_contants__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(6);
-/* harmony import */ var _lib_apis_post__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(39);
+/* harmony import */ var _lib_apis_post__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(41);
 
 
 
@@ -829,18 +829,18 @@ var readPostQuery = Object(recoil__WEBPACK_IMPORTED_MODULE_2__["selectorFamily"]
 
 /***/ }),
 
-/***/ 41:
+/***/ 43:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var _Users_ominseob_Project_ReactProject_blog_blog_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(32);
+/* harmony import */ var _Users_ominseob_Project_ReactProject_blog_blog_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(34);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(0);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(9);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(1);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_router_dom__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _lib_styles_palette__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(33);
+/* harmony import */ var _lib_styles_palette__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(35);
 
 
 function _templateObject2() {
@@ -886,16 +886,16 @@ var SubInfoBlock = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div(
 
 /***/ }),
 
-/***/ 42:
+/***/ 44:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var _Users_ominseob_Project_ReactProject_blog_blog_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(32);
+/* harmony import */ var _Users_ominseob_Project_ReactProject_blog_blog_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(34);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(0);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(9);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _lib_styles_palette__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(33);
+/* harmony import */ var _lib_styles_palette__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(35);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(1);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_router_dom__WEBPACK_IMPORTED_MODULE_4__);
 
@@ -931,7 +931,7 @@ var TagsBlock = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div(_te
 
 /***/ }),
 
-/***/ 47:
+/***/ 49:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -947,7 +947,7 @@ var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_)
 var external_recoil_ = __webpack_require__(3);
 
 // EXTERNAL MODULE: ./src/lib/hooks/useRequest.tsx
-var useRequest = __webpack_require__(38);
+var useRequest = __webpack_require__(40);
 
 // EXTERNAL MODULE: ./src/lib/apis/auth.ts
 var auth = __webpack_require__(16);
@@ -956,7 +956,7 @@ var auth = __webpack_require__(16);
 var store_user = __webpack_require__(15);
 
 // EXTERNAL MODULE: ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/taggedTemplateLiteral.js
-var taggedTemplateLiteral = __webpack_require__(32);
+var taggedTemplateLiteral = __webpack_require__(34);
 
 // EXTERNAL MODULE: external "styled-components"
 var external_styled_components_ = __webpack_require__(9);
@@ -966,10 +966,10 @@ var external_styled_components_default = /*#__PURE__*/__webpack_require__.n(exte
 var external_react_router_dom_ = __webpack_require__(1);
 
 // EXTERNAL MODULE: ./src/components/common/Responsive.tsx + 2 modules
-var Responsive = __webpack_require__(37);
+var Responsive = __webpack_require__(39);
 
 // EXTERNAL MODULE: ./src/components/common/Button.tsx
-var Button = __webpack_require__(34);
+var Button = __webpack_require__(36);
 
 // CONCATENATED MODULE: ./src/components/common/Header.tsx
 

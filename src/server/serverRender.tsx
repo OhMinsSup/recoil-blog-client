@@ -19,6 +19,7 @@ type SSROption = {
 };
 
 const serverRender = async ({ url, loggedIn, cookie }: SSROption) => {
+  console.log(loggedIn, cookie);
   const context = {};
 
   const sheet = new ServerStyleSheet();
