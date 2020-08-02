@@ -7,8 +7,7 @@ import {
 } from 'recoil';
 
 import { userState } from '../../shared/user';
-import { postState, readPostQuery } from '../../shared/post';
-import { editorFormState } from '../write/atoms';
+import { postState, readPostQuery, editorFormState } from '../../shared/post';
 import { removePostAPI } from '../../lib/apis/post';
 
 import PostViewer from '../../components/post/PostViewer';
@@ -31,7 +30,6 @@ const PostViewerContainer: React.FC<PostViewerContainerProps> = ({ match }) => {
   );
 
   useEffect(() => {
-    console.log(readPostLoadable.state);
     if (readPostLoadable.state === 'hasValue') {
       setReadPostLoadable(readPostLoadable.contents);
     }

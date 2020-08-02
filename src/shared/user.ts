@@ -23,4 +23,7 @@ export const userQuery = selector({
       throw e;
     }
   },
+  set: ({ set }, newValue) => {
+    set(userState, newValue);
+  },
 });

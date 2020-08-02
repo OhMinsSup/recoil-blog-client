@@ -5,14 +5,12 @@ import PaginationContainer from '../containers/posts/PaginationContainer';
 import { RouteComponentProps } from 'react-router-dom';
 
 interface PostListPageProps extends RouteComponentProps<{ username: string }> {}
-const PostListPage: React.FC<PostListPageProps> = ({ match }) => {
-  return (
-    <>
-      <HeaderContainer />
-      <PostListContainer match={match} />
-      <PaginationContainer match={match} />
-    </>
-  );
-};
+const PostListPage: React.FC<PostListPageProps> = ({ match }) => (
+  <>
+    <HeaderContainer />
+    <PostListContainer match={match} />
+    <PaginationContainer match={match} />
+  </>
+);
 
 export default PostListPage;

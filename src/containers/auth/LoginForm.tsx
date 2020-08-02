@@ -1,12 +1,14 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { useRecoilState, useSetRecoilState, useResetRecoilState } from 'recoil';
 import { useHistory } from 'react-router-dom';
-import AuthForm, { AuthFormType } from '../../components/auth/AuthForm';
-import { loginFormState, LoginFormInitState } from './atoms';
+
+import { loginFormState } from '../../shared/auth';
 import useRequest from '../../lib/hooks/useRequest';
 import { loginAPI } from '../../lib/apis/auth';
 import { userState } from '../../shared/user';
 import { saveUserData } from '../../lib/utils';
+
+import AuthForm, { AuthFormType } from '../../components/auth/AuthForm';
 
 interface LoginFormProps {}
 const LoginForm: React.FC<LoginFormProps> = () => {

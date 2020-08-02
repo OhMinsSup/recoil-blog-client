@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useState } from 'react';
 import { useRecoilState, useSetRecoilState, useResetRecoilState } from 'recoil';
 import { useHistory } from 'react-router-dom';
 
-import { registerFormState, RegisterFormInitState } from './atoms';
+import { registerFormState } from '../../shared/auth';
 import { userState } from '../../shared/user';
 import { registerAPI } from '../../lib/apis/auth';
 import { saveUserData } from '../../lib/utils';

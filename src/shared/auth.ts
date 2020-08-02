@@ -1,5 +1,5 @@
 import { atom } from 'recoil';
-import { RECOIL_KEY } from '../../../lib/contants';
+import { RECOIL_KEY } from '../lib/contants';
 
 interface BaseFormState {
   username: string;

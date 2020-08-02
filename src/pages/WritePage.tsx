@@ -4,12 +4,10 @@ import WriteContainer from '../containers/write/WriteContainer';
 import { RouteComponentProps } from 'react-router-dom';
 
 interface WritePageProps extends RouteComponentProps<{ postId?: string }> {}
-const WritePage: React.FC<WritePageProps> = ({ match }) => {
-  return (
-    <Responsive>
-      <WriteContainer match={match} />
-    </Responsive>
-  );
-};
+const WritePage: React.FC<WritePageProps> = ({ match }) => (
+  <Responsive>
+    <WriteContainer match={match} />
+  </Responsive>
+);
 
 export default WritePage;

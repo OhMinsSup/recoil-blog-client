@@ -2,15 +2,18 @@ import React, { useEffect } from 'react';
 import { useRecoilState } from 'recoil';
 import { useHistory } from 'react-router-dom';
 
-import { PostData, postState } from '../../shared/post';
+import { PostData, postState, editorFormState } from '../../shared/post';
 import { writePostAPI, updatePostAPI } from '../../lib/apis/post';
-import { editorFormState } from './atoms';
 import useRequest from '../../lib/hooks/useRequest';
 
 import WriteActionButtons from '../../components/write/WriteActionButtons';
 
-interface WriteActionButtonsContainerProps {}
-const WriteActionButtonsContainer: React.FC<WriteActionButtonsContainerProps> = () => {
+interface WriteActionButtonsContainerProps {
+  postId?: string;
+}
+const WriteActionButtonsContainer: React.FC<WriteActionButtonsContainerProps> = ({
+  postId,
+}) => {
   const [post] = useRecoilState(postState);
   const [editor] = useRecoilState(editorFormState);
   const [_writePost, _, createData] = useRequest(writePostAPI);
@@ -53,7 +56,13 @@ const WriteActionButtonsContainer: React.FC<WriteActionButtonsContainerProps> = 
     history.goBack();
   };
 
-  return <WriteActionButtons onCancel={onCancel} onPublish={onPublish} />;
+  return (
+    <WriteActionButtons
+      onCancel={onCancel}
+      onPublish={onPublish}
+      postId={postId}
+    />
+  );
 };
 
 export default WriteActionButtonsContainer;

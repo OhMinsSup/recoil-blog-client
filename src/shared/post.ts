@@ -1,7 +1,6 @@
 import { selectorFamily, atom } from 'recoil';
 import { RECOIL_KEY } from '../lib/contants';
 import { readPostAPI } from '../lib/apis/post';
-import { editorFormState } from '../containers/write/atoms';
 
 export interface PostData {
   _id: any;
@@ -14,6 +13,21 @@ export interface PostData {
     username: string;
   };
 }
+
+interface EditorFormState {
+  title: string;
+  body: string;
+  tags: string[];
+}
+
+export const editorFormState = atom<EditorFormState>({
+  key: RECOIL_KEY.EDITOR_DATA,
+  default: {
+    title: '',
+    body: '',
+    tags: [],
+  },
+});
 
 export const postState = atom<PostData | null>({
   key: RECOIL_KEY.READ_POST_DATA,

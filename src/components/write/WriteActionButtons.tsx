@@ -1,19 +1,22 @@
-import React from "react";
-import styled from "styled-components";
-import Button from "../common/Button";
+import React from 'react';
+import styled from 'styled-components';
+import Button from '../common/Button';
 
 interface WriteActionButtonsProps {
   onCancel: () => void;
   onPublish: () => void;
+  postId?: string;
 }
 
-const WriteActionButtons: React.FC<WriteActionButtonsProps> = (
-  { onCancel, onPublish },
-) => {
+const WriteActionButtons: React.FC<WriteActionButtonsProps> = ({
+  onCancel,
+  onPublish,
+  postId,
+}) => {
   return (
     <WriteActionButtonsBlock>
       <StyledButton cyan onClick={onPublish}>
-        포스트 등록
+        포스트 {postId ? '수정' : '등록'}
       </StyledButton>
       <StyledButton onClick={onCancel}>취소</StyledButton>
     </WriteActionButtonsBlock>
