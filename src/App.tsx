@@ -1,13 +1,14 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-
-import PostListPage from './pages/PostListPage';
-import PostPage from './pages/PostPage';
-import WritePage from './pages/WritePage';
-import LoginPage from './pages/LoginPage';
-import RegisterPage from './pages/RegisterPage';
+import loadable from '@loadable/component';
 
 import Core from './containers/common/Core';
+
+const PostListPage = loadable(() => import('./pages/PostListPage'));
+const PostPage = loadable(() => import('./pages/PostPage'));
+const WritePage = loadable(() => import('./pages/WritePage'));
+const LoginPage = loadable(() => import('./pages/LoginPage'));
+const RegisterPage = loadable(() => import('./pages/RegisterPage'));
 
 function App() {
   return (

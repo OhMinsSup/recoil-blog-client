@@ -2,12 +2,15 @@
 
 const path = require('path');
 const fs = require('fs');
+const url = require('url');
 const getPublicUrlOrPath = require('react-dev-utils/getPublicUrlOrPath');
+
+const envPublicUrl = process.env.PUBLIC_URL;
 
 // Make sure any symlinks in the project folder are resolved:
 // https://github.com/facebook/create-react-app/issues/637
 const appDirectory = fs.realpathSync(process.cwd());
-const resolveApp = relativePath => path.resolve(appDirectory, relativePath);
+const resolveApp = (relativePath) => path.resolve(appDirectory, relativePath);
 
 // We use `PUBLIC_URL` environment variable or "homepage" field to infer
 // "public path" at which the app is served.
@@ -18,8 +21,29 @@ const resolveApp = relativePath => path.resolve(appDirectory, relativePath);
 const publicUrlOrPath = getPublicUrlOrPath(
   process.env.NODE_ENV === 'development',
   require(resolveApp('package.json')).homepage,
-  process.env.PUBLIC_URL
+  process.env.PUBLIC_URL,
 );
+
+function ensureSlash(inputPath, needsSlash) {
+  const hasSlash = inputPath.endsWith('/');
+  if (hasSlash && !needsSlash) {
+    return inputPath.substr(0, inputPath.length - 1);
+  } else if (!hasSlash && needsSlash) {
+    return `${inputPath}/`;
+  } else {
+    return inputPath;
+  }
+}
+
+const getPublicUrl = (appPackageJson) =>
+  envPublicUrl || require(appPackageJson).homepage;
+
+function getServedPath(appPackageJson) {
+  const publicUrl = getPublicUrl(appPackageJson);
+  const servedUrl =
+    envPublicUrl || (publicUrl ? url.parse(publicUrl).pathname : '/');
+  return ensureSlash(servedUrl, true);
+}
 
 const moduleFileExtensions = [
   'web.mjs',
@@ -37,8 +61,8 @@ const moduleFileExtensions = [
 
 // Resolve file paths in the same order as webpack
 const resolveModule = (resolveFn, filePath) => {
-  const extension = moduleFileExtensions.find(extension =>
-    fs.existsSync(resolveFn(`${filePath}.${extension}`))
+  const extension = moduleFileExtensions.find((extension) =>
+    fs.existsSync(resolveFn(`${filePath}.${extension}`)),
   );
 
   if (extension) {
@@ -65,8 +89,9 @@ module.exports = {
   proxySetup: resolveApp('src/setupProxy.js'),
   appNodeModules: resolveApp('node_modules'),
   publicUrlOrPath,
+  servedPath: getServedPath(resolveApp('package.json')),
+  ssrIndexJs: resolveApp('src/index.server.tsx'), // 서버 사이드 렌더링 엔트리
+  ssrBuild: resolveApp('dist'),
 };
-
-
 
 module.exports.moduleFileExtensions = moduleFileExtensions;
