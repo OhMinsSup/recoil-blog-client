@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import { useRecoilState, useSetRecoilState } from 'recoil';
+import { useRecoilState, useSetRecoilState, useResetRecoilState } from 'recoil';
 import { useHistory } from 'react-router-dom';
 import AuthForm, { AuthFormType } from '../../components/auth/AuthForm';
 import { loginFormState, LoginFormInitState } from './atoms';
@@ -12,8 +12,9 @@ interface LoginFormProps {}
 const LoginForm: React.FC<LoginFormProps> = () => {
   const history = useHistory();
 
-  const [form, setForm] = useRecoilState(loginFormState);
   const setUserData = useSetRecoilState(userState);
+  const [form, setForm] = useRecoilState(loginFormState);
+  const resetLoginForm = useResetRecoilState(loginFormState);
 
   const [error, setError] = useState<null | string>(null);
   const [_login, _, userData, userError] = useRequest(loginAPI);
@@ -26,13 +27,10 @@ const LoginForm: React.FC<LoginFormProps> = () => {
     [setForm],
   );
 
-  const initializeForm = useCallback(() => {
-    setForm((oldForm) => ({ ...oldForm, ...LoginFormInitState }));
-  }, [setForm]);
-
   useEffect(() => {
-    initializeForm();
-  }, [initializeForm]);
+    resetLoginForm();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   useEffect(() => {
     if (userData) {

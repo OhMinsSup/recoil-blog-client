@@ -24,20 +24,23 @@ const PostViewerContainer: React.FC<PostViewerContainerProps> = ({ match }) => {
   const history = useHistory();
   const user = useRecoilValue(userState);
   const post = useRecoilValue(postState);
+  const resetPost = useResetRecoilState(postState);
   const resetEditForm = useResetRecoilState(editorFormState);
   const [readPostLoadable, setReadPostLoadable] = useRecoilStateLoadable(
     readPostQuery(postId),
   );
 
   useEffect(() => {
+    console.log(readPostLoadable.state);
     if (readPostLoadable.state === 'hasValue') {
       setReadPostLoadable(readPostLoadable.contents);
     }
     return () => {
+      resetPost();
       resetEditForm();
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [readPostLoadable.state, resetEditForm]);
+  }, [readPostLoadable.state, resetEditForm, resetPost]);
 
   const ownPost = (user && user._id) === (post && post.user._id);
 
@@ -66,7 +69,7 @@ const PostViewerContainer: React.FC<PostViewerContainerProps> = ({ match }) => {
     case 'hasValue':
       return (
         <PostViewer
-          post={post}
+          post={readPostLoadable.contents}
           actionButtons={
             ownPost && <PostActionButtons onEdit={onEdit} onRemove={onRemove} />
           }

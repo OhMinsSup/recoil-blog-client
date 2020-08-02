@@ -21,6 +21,7 @@ const WriteContainer: React.FC<WriteContainerProps> = ({ match }) => {
     if (readPostLoadable.state === 'hasValue') {
       setReadPostLoadable(readPostLoadable.contents);
     }
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [readPostLoadable.state, setReadPostLoadable]);
 

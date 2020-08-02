@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import { useRecoilState, useSetRecoilState } from 'recoil';
+import { useRecoilState, useSetRecoilState, useResetRecoilState } from 'recoil';
 import { useHistory } from 'react-router-dom';
 
 import { registerFormState, RegisterFormInitState } from './atoms';
@@ -16,6 +16,7 @@ const LoginForm: React.FC<LoginFormProps> = () => {
 
   const setUserData = useSetRecoilState(userState);
   const [form, setForm] = useRecoilState(registerFormState);
+  const resetRegisterForm = useResetRecoilState(registerFormState);
 
   const [error, setError] = useState<string | null>(null);
   const [_register, _, userData, userError] = useRequest(registerAPI);
@@ -28,13 +29,10 @@ const LoginForm: React.FC<LoginFormProps> = () => {
     [setForm],
   );
 
-  const initializeForm = useCallback(() => {
-    setForm((oldForm) => ({ ...oldForm, ...RegisterFormInitState }));
-  }, [setForm]);
-
   useEffect(() => {
-    initializeForm();
-  }, [initializeForm]);
+    resetRegisterForm();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   useEffect(() => {
     if (userData) {

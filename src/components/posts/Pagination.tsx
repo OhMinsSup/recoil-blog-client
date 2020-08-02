@@ -1,13 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
-import qs from 'qs';
+import qs, { ParsedQs } from 'qs';
 import Button from '../common/Button';
 
 interface PaginationProps {
   page: number;
   lastPage: number;
   username?: string;
-  tag?: string;
+  tag?: string | ParsedQs | string[] | ParsedQs[];
 }
 const Pagination: React.FC<PaginationProps> = ({
   page,
@@ -48,10 +48,10 @@ const buildLink = ({
   page,
 }: {
   username?: string;
-  tag?: string;
+  tag?: string | ParsedQs | string[] | ParsedQs[];
   page: number;
 }) => {
-  const query = qs.stringify({ tag, page });
+  const query = qs.stringify({ page, ...(tag ? { tag: String(tag) } : {}) });
   return username ? `/@${username}?${query}` : `/?${query}`;
 };
 

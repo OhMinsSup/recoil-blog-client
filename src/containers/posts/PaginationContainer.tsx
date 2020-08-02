@@ -26,7 +26,7 @@ const PaginationContainer: React.FC<PaginationContainerProps> = ({ match }) => {
 
   return (
     <Pagination
-      tag={String(tag)}
+      tag={tag}
       username={username}
       page={parseInt(String(page), 10)}
       lastPage={lastPage}

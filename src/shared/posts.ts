@@ -28,10 +28,19 @@ export const listPostsQuery = selectorFamily({
   get: ({ tag, page, username }: ListPostsQueryParams) => async () => {
     try {
       const response = await listPostsAPI({ tag, page, username });
-      return response.data;
+      return {
+        lastPage: parseInt(response.headers['last-page'], 10), // 문자열을 숫자로 변환
+        posts: response.data,
+      };
     } catch (e) {
       console.error(e);
       throw e;
     }
+  },
+  set: () => ({ set }, newValue) => {
+    if (!newValue) return;
+    const postData = newValue as { posts: PostData[]; lastPage: number };
+    set(paginationState, postData.lastPage);
+    set(postsState, postData.posts);
   },
 });

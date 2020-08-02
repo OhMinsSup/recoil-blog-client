@@ -1,22 +1,29 @@
 import React, { useCallback } from 'react';
-import { useRecoilValue } from 'recoil';
+import { useRecoilState } from 'recoil';
 
 import useRequest from '../../lib/hooks/useRequest';
 import { logoutAPI } from '../../lib/apis/auth';
 import { userState } from '../../shared/user';
 
 import Header from '../../components/common/Header';
+import { useHistory } from 'react-router-dom';
+import { STORAGE_KEY } from '../../lib/contants';
 
 interface HeaderContainerProps {}
 const HeaderContainer: React.FC<HeaderContainerProps> = () => {
-  const userData = useRecoilValue(userState);
+  const history = useHistory();
+  const [user, setUser] = useRecoilState(userState);
   const [_logout] = useRequest(logoutAPI);
 
   const onLogout = useCallback(() => {
     _logout();
-  }, [_logout]);
+    setUser(null);
 
-  return <Header user={userData} onLogout={onLogout} />;
+    localStorage.removeItem(STORAGE_KEY.BLOG_USER_DATA);
+    history.push('/');
+  }, [_logout, setUser, history]);
+
+  return <Header user={user} onLogout={onLogout} />;
 };
 
 export default HeaderContainer;

@@ -1,13 +1,9 @@
 import React, { useEffect } from 'react';
 import qs from 'qs';
 import { match, useLocation } from 'react-router-dom';
-import {
-  useRecoilValueLoadable,
-  useSetRecoilState,
-  useRecoilState,
-} from 'recoil';
+import { useRecoilStateLoadable, useRecoilState } from 'recoil';
 
-import { listPostsQuery, postsState } from '../../shared/posts';
+import { listPostsQuery } from '../../shared/posts';
 import { userState } from '../../shared/user';
 
 import PostList from '../../components/posts/PostList';
@@ -17,29 +13,30 @@ interface PostListContainerProps {
   match: match<{ username: string }>;
 }
 const PostListContainer: React.FC<PostListContainerProps> = ({ match }) => {
-  const { username } = match.params;
-
   const location = useLocation();
   const { tag, page } = qs.parse(location.search, {
     ignoreQueryPrefix: true,
   });
 
+  const { username } = match.params;
+  const queryString = {
+    username,
+    page: parseInt(String(page || 1), 10),
+    ...(tag ? { tag: String(tag) } : {}),
+  };
+
   const [user] = useRecoilState(userState);
-  const setPosts = useSetRecoilState(postsState);
-  const listPostsLoadable = useRecoilValueLoadable(
-    listPostsQuery({
-      username,
-      page: parseInt(String(page || 1), 10),
-      ...(tag ? { tag: String(tag) } : {}),
-    }),
+  const [listPostsLoadable, setListPostsLoadable] = useRecoilStateLoadable(
+    listPostsQuery(queryString),
   );
 
   useEffect(() => {
+    console.log(listPostsLoadable.state);
     if (listPostsLoadable.state === 'hasValue') {
-      setPosts(listPostsLoadable.contents);
+      setListPostsLoadable(listPostsLoadable.contents);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [listPostsLoadable.state, listPostsLoadable.contents, setPosts]);
+  }, [listPostsLoadable.state, setListPostsLoadable, location.search]);
 
   switch (listPostsLoadable.state) {
     case 'hasError':
@@ -48,7 +45,10 @@ const PostListContainer: React.FC<PostListContainerProps> = ({ match }) => {
       return null;
     case 'hasValue':
       return (
-        <PostList posts={listPostsLoadable.contents} showWriteButton={user} />
+        <PostList
+          posts={listPostsLoadable.contents.posts}
+          showWriteButton={user}
+        />
       );
   }
 };
