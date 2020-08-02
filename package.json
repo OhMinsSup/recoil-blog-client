@@ -172,6 +172,5 @@
     "@types/react-router-dom": "^5.1.3",
     "@types/recoil": "^0.0.1",
     "@types/styled-components": "^5.0.1"
-  },
-  "proxy": "http://localhost:4000/"
+  }
 }

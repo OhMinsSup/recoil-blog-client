@@ -1,1 +1,1094 @@
-exports.ids=[3],exports.modules={22:function(n,e,t){"use strict";t.r(e);var r=t(0),a=t.n(r),c=t(47),o=t(3),u=t.n(o),i=t(7),l=t(13),s=t(1),f=t(2),m=t(14),b=t(40),d=t(39),p=t(32),g=t(27),v=t.n(g),O=t(29),h=t(33),j=t(37),E=t(41),y=t(42);function x(){var n=Object(p.a)(["\n  font-size: 1.3125rem;\n  color: ",";\n"]);return x=function(){return n},n}function w(){var n=Object(p.a)(["\n  border-bottom: 1px solid ",";\n  padding-bottom: 3rem;\n  margin-bottom: 3rem;\n  h1 {\n    font-size: 3rem;\n    line-height: 1.5;\n    margin: 0;\n  }\n"]);return w=function(){return n},n}function k(){var n=Object(p.a)(["\n  margin-top: 4rem;\n"]);return k=function(){return n},n}var S=function(n){var e=n.post,t=n.actionButtons;if(!e)return null;var r=e.title,c=e.body,o=e.user,u=e.publishedDate,i=e.tags;return(a.a.createElement(C,null,a.a.createElement(O.Helmet,null,a.a.createElement("title",null,r," - REACTERS")),a.a.createElement(R,null,a.a.createElement("h1",null,r),a.a.createElement(E.a,{username:o.username,publishedDate:u,hasMarginTop:!0}),a.a.createElement(y.a,{tags:i})),t,a.a.createElement(T,{dangerouslySetInnerHTML:{__html:c}})))},C=v()(j.a)(k()),R=v.a.div(w(),h.a.gray[2]),T=v.a.div(x(),h.a.gray[8]);function L(){var n=Object(p.a)(["\n  margin-top: 4rem;\n"]);return L=function(){return n},n}var _=function(){return a.a.createElement(D,null,"존재하지 않는 포스트입니다.")},D=v()(j.a)(L()),z=t(34);function A(){var n=Object(p.a)(["\n  height: 2rem;\n  & + & {\n    margin-left: 0.75rem;\n  }\n"]);return A=function(){return n},n}function I(){var n=Object(p.a)(["\n  width: 320px;\n  background: white;\n  padding: 1.5rem;\n  border-radius: 4px;\n  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.125);\n  h2 {\n    margin-top: 0;\n    margin-bottom: 1rem;\n  }\n  p {\n    margin-bottom: 3rem;\n  }\n  .buttons {\n    display: flex;\n    justify-content: flex-end;\n  }\n"]);return I=function(){return n},n}function B(){var n=Object(p.a)(["\n  position: fixed;\n  z-index: 30;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  background: rgba(0, 0, 0, 0.25);\n  display: flex;\n  justify-content: center;\n  align-items: center;\n"]);return B=function(){return n},n}var M=function(n){var e=n.visible,t=n.title,r=n.description,c=n.confirmText,o=void 0===c?"확인":c,u=n.cancelText,i=void 0===u?"취소":u,l=n.onConfirm,s=n.onCancel;return e?a.a.createElement(P,null,a.a.createElement(F,null,a.a.createElement("h2",null,t),a.a.createElement("p",null,r),a.a.createElement("div",{className:"buttons"},a.a.createElement(H,{onClick:s},i),a.a.createElement(H,{cyan:!0,onClick:l},o)))):null},P=v.a.div(B()),F=v.a.div(I()),H=v()(z.a)(A()),N=function(n){var e=n.visible,t=n.onConfirm,r=n.onCancel;return(a.a.createElement(M,{visible:e,title:"포스트 삭제",description:"포스트를 정말 삭제하시겠습니까?",confirmText:"삭제",onConfirm:t,onCancel:r}))};function V(){var n=Object(p.a)(["\n  padding: 0.25rem 0.5rem;\n  border-radius: 4px;\n  color: ",";\n  font-weight: bold;\n  border: none;\n  outline: none;\n  font-size: 0.875rem;\n  cursor: pointer;\n  &:hover {\n    background: ",";\n    color: ",";\n  }\n  & + & {\n    margin-left: 0.25rem;\n  }\n"]);return V=function(){return n},n}function U(){var n=Object(p.a)(["\n  display: flex;\n  justify-content: flex-end;\n  margin-bottom: 2rem;\n  margin-top: -1.5rem;\n"]);return U=function(){return n},n}var G=function(n){var e=n.onEdit,t=n.onRemove,c=Object(r.useState)(!1),o=Object(l.a)(c,2),u=o[0],i=o[1];return a.a.createElement(a.a.Fragment,null,a.a.createElement(Q,null,a.a.createElement(Y,{onClick:e},"수정"),a.a.createElement(Y,{onClick:function(){i(!0)}},"삭제")),a.a.createElement(N,{visible:u,onConfirm:function(){i(!1),t()},onCancel:function(){i(!1)}}))},Q=v.a.div(U()),Y=v.a.button(V(),h.a.gray[6],h.a.gray[1],h.a.cyan[7]),q=function(n){var e=n.match.params.postId,t=Object(s.useHistory)(),c=Object(f.useRecoilValue)(m.b),o=Object(f.useRecoilValue)(b.b),p=Object(f.useResetRecoilState)(b.b),g=Object(f.useResetRecoilState)(b.a),v=Object(f.useRecoilStateLoadable)(Object(b.c)(e)),O=Object(l.a)(v,2),h=O[0],j=O[1];Object(r.useEffect)((function(){return"hasValue"===h.state&&j(h.contents),function(){p(),g()}}),[h.state,g,p]);var E=(c&&c._id)===(o&&o.user._id),y=Object(r.useCallback)((function(){o&&t.push("/write/".concat(e))}),[o]),x=Object(r.useCallback)(Object(i.a)(u.a.mark((function n(){return u.a.wrap((function(n){for(;;)switch(n.prev=n.next){case 0:return n.prev=0,n.next=3,Object(d.c)(e);case 3:t.push("/"),n.next=9;break;case 6:n.prev=6,n.t0=n.catch(0),console.error(n.t0);case 9:case"end":return n.stop()}}),n,null,[[0,6]])}))),[]);switch(h.state){case"hasError":return a.a.createElement(_,null);case"loading":return null;case"hasValue":return a.a.createElement(S,{post:h.contents,actionButtons:E&&a.a.createElement(G,{onEdit:y,onRemove:x})})}};e.default=function(n){var e=n.match;return(a.a.createElement("div",null,a.a.createElement(c.a,null),a.a.createElement(q,{match:e})))}},32:function(n,e,t){"use strict";function r(n,e){return e||(e=n.slice(0)),Object.freeze(Object.defineProperties(n,{raw:{value:Object.freeze(e)}}))}t.d(e,"a",(function(){return r}))},33:function(n,e,t){"use strict";e.a={gray:["#f8f9fa","#f1f3f5","#e9ecef","#dee2e6","#ced4da","#adb5bd","#868e96","#495057","#343a40","#212529"],cyan:["#e3fafc","#c5f6fa","#99e9f2","#66d9e8","#3bc9db","#22b8cf","#15aabf","#1098ad","#0c8599","#0b7285"]}},34:function(n,e,t){"use strict";var r=t(32),a=t(0),c=t.n(a),o=t(27),u=t.n(o),i=t(33),l=t(1);function s(){var n=Object(r.a)(["\n  ","\n"]);return s=function(){return n},n}function f(){var n=Object(r.a)(["\n  ","\n"]);return f=function(){return n},n}function m(){var n=Object(r.a)(["\n      background: ",";\n      &:hover {\n        background: ",";\n      }\n    "]);return m=function(){return n},n}function b(){var n=Object(r.a)(["\n      padding-top: 0.75rem;\n      padding-bottom: 0.75rem;\n      width: 100%;\n      font-size: 1.125rem;\n    "]);return b=function(){return n},n}function d(){var n=Object(r.a)(["\n  border: none;\n  border-radius: 4px;\n  font-size: 1rem;\n  font-weight: bold;\n  padding: 0.25rem 1rem;\n  color: white;\n  outline: none;\n  cursor: pointer;\n  background: ",";\n  &:hover {\n    background: ",";\n  }\n  ","\n  ","\n    &:disabled {\n    background: ",";\n    color: ",";\n    cursor: not-allowed;\n  }\n"]);return d=function(){return n},n}e.a=function(n){return n.to?c.a.createElement(v,Object.assign({},n,{to:n.to,cyan:n.cyan?"true":""})):c.a.createElement(g,n)};var p=Object(o.css)(d(),i.a.gray[8],i.a.gray[6],(function(n){return n.fullwidth&&Object(o.css)(b())}),(function(n){return n.cyan&&Object(o.css)(m(),i.a.cyan[5],i.a.cyan[4])}),i.a.gray[3],i.a.gray[5]),g=u.a.button(f(),p),v=u()(l.Link)(s(),p)},37:function(n,e,t){"use strict";var r=t(32);function a(n,e){if(null==n)return{};var t,r,a=function(n,e){if(null==n)return{};var t,r,a={},c=Object.keys(n);for(r=0;r<c.length;r++)t=c[r],e.indexOf(t)>=0||(a[t]=n[t]);return a}(n,e);if(Object.getOwnPropertySymbols){var c=Object.getOwnPropertySymbols(n);for(r=0;r<c.length;r++)t=c[r],e.indexOf(t)>=0||Object.prototype.propertyIsEnumerable.call(n,t)&&(a[t]=n[t])}return a}var c=t(0),o=t.n(c),u=t(27);function i(){var n=Object(r.a)(["\n  padding-left: 1rem;\n  padding-right: 1rem;\n  width: 1024px;\n  margin: 0 auto; /* 중앙 정렬 */\n  /* 브라우저 크기에 따라 가로 사이즈 변경 */\n  @media (max-width: 1024px) {\n    width: 768px;\n  }\n  @media (max-width: 768px) {\n    width: 100%;\n  }\n"]);return i=function(){return n},n}var l=t.n(u).a.div(i());e.a=function(n){var e=n.children,t=a(n,["children"]);return(o.a.createElement(l,t,e))}},38:function(n,e,t){"use strict";t.d(e,"a",(function(){return i}));var r=t(3),a=t.n(r),c=t(7),o=t(13),u=t(0);function i(n){var e=Object(u.useState)(!1),t=Object(o.a)(e,2),r=t[0],i=t[1],l=Object(u.useState)(null),s=Object(o.a)(l,2),f=s[0],m=s[1],b=Object(u.useState)(null),d=Object(o.a)(b,2),p=d[0],g=d[1];return[Object(u.useCallback)(Object(c.a)(a.a.mark((function e(){var t,r=arguments;return a.a.wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return e.prev=0,i(!0),e.next=4,n.apply(void 0,r);case 4:t=e.sent,m(t.data),e.next=12;break;case 8:throw e.prev=8,e.t0=e.catch(0),g(e.t0),e.t0;case 12:i(!1);case 13:case"end":return e.stop()}}),e,null,[[0,8]])}))),[]),r,f,p,function(){i(!1),m(null),g(null)}]}},39:function(n,e,t){"use strict";t.d(e,"e",(function(){return o})),t.d(e,"b",(function(){return u})),t.d(e,"a",(function(){return i})),t.d(e,"c",(function(){return l})),t.d(e,"d",(function(){return s}));var r=t(6),a=t(28),c=t.n(a),o=function(n){var e=n.title,t=n.body,a=n.tags;return r.a.post("/api/posts",{title:e,body:t,tags:a})},u=function(n){return r.a.get("/api/posts/".concat(n))},i=function(n){var e=n.page,t=n.username,a=n.tag,o=c.a.stringify({page:e,username:t,tag:a});return r.a.get("/api/posts?".concat(o))},l=function(n){return r.a.delete("/api/posts/".concat(n))},s=function(n){var e=n.id,t=n.title,a=n.body,c=n.tags;return r.a.patch("/api/posts/".concat(e),{title:t,body:a,tags:c})}},40:function(n,e,t){"use strict";t.d(e,"a",(function(){return l})),t.d(e,"b",(function(){return s})),t.d(e,"c",(function(){return f}));var r=t(3),a=t.n(r),c=t(7),o=t(2),u=t(5),i=t(39),l=Object(o.atom)({key:u.a.EDITOR_DATA,default:{title:"",body:"",tags:[]}}),s=Object(o.atom)({key:u.a.READ_POST_DATA,default:null}),f=Object(o.selectorFamily)({key:u.a.LIST_POSTS_QUERY,get:function(n){return Object(c.a)(a.a.mark((function e(){var t;return a.a.wrap((function(e){for(;;)switch(e.prev=e.next){case 0:if(n){e.next=2;break}return e.abrupt("return",null);case 2:return e.prev=2,e.next=5,Object(i.b)(n);case 5:return t=e.sent,e.abrupt("return",t.data);case 9:throw e.prev=9,e.t0=e.catch(2),console.error(e.t0),e.t0;case 13:case"end":return e.stop()}}),e,null,[[2,9]])})))},set:function(n){return function(n,e){var t=n.set;if(e){var r=e;t(s,r),t(l,{title:r.title,body:r.body,tags:r.tags})}}}})},41:function(n,e,t){"use strict";var r=t(32),a=t(0),c=t.n(a),o=t(27),u=t.n(o),i=t(1),l=t(33);function s(){var n=Object(r.a)(["\n      margin-top: 1rem;\n    "]);return s=function(){return n},n}function f(){var n=Object(r.a)(["\n  ","\n  color: ",";\n  /* span 사이에 가운뎃점 문자 보여주기*/\n  span + span:before {\n    color: ",";\n    padding-left: 0.25rem;\n    padding-right: 0.25rem;\n    content: '\\B7'; /* 가운뎃점 문자 */\n  }\n"],["\n  ","\n  color: ",";\n  /* span 사이에 가운뎃점 문자 보여주기*/\n  span + span:before {\n    color: ",";\n    padding-left: 0.25rem;\n    padding-right: 0.25rem;\n    content: '\\\\B7'; /* 가운뎃점 문자 */\n  }\n"]);return f=function(){return n},n}e.a=function(n){var e=n.username,t=n.publishedDate,r=n.hasMarginTop;return(c.a.createElement(m,{hasMarginTop:r},c.a.createElement("span",null,c.a.createElement("b",null,c.a.createElement(i.Link,{to:"/@".concat(e)},e))),c.a.createElement("span",null,new Date(t).toLocaleDateString())))};var m=u.a.div(f(),(function(n){return n.hasMarginTop&&Object(o.css)(s())}),l.a.gray[6],l.a.gray[4])},42:function(n,e,t){"use strict";var r=t(32),a=t(0),c=t.n(a),o=t(27),u=t.n(o),i=t(33),l=t(1);function s(){var n=Object(r.a)(["\n  margin-top: 0.5rem;\n  .tag {\n    display: inline-block;\n    color: ",";\n    text-decoration: none;\n    margin-right: 0.5rem;\n    &:hover {\n      color: ",";\n    }\n  }\n"]);return s=function(){return n},n}e.a=function(n){var e=n.tags;return(c.a.createElement(f,null,e.map((function(n){return c.a.createElement(l.Link,{className:"tag",to:"/?tag=".concat(n),key:n},"#",n)}))))};var f=u.a.div(s(),i.a.cyan[7],i.a.cyan[6])},47:function(n,e,t){"use strict";var r=t(13),a=t(0),c=t.n(a),o=t(2),u=t(38),i=t(15),l=t(14),s=t(32),f=t(27),m=t.n(f),b=t(1),d=t(37),p=t(34);function g(){var n=Object(s.a)(["\n  font-weight: 800;\n  margin-right: 1rem;\n"]);return g=function(){return n},n}function v(){var n=Object(s.a)(["\n  height: 4rem;\n"]);return v=function(){return n},n}function O(){var n=Object(s.a)(["\n  height: 4rem;\n  display: flex;\n  align-items: center;\n  justify-content: space-between; /* 자식 엘리먼트 사이에 여백을 최대로 설정 */\n  .logo {\n    font-size: 1.125rem;\n    font-weight: 800;\n    letter-spacing: 2px;\n  }\n  .right {\n    display: flex;\n    align-items: center;\n  }\n"]);return O=function(){return n},n}function h(){var n=Object(s.a)(["\n  position: fixed;\n  width: 100%;\n  background: white;\n  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);\n"]);return h=function(){return n},n}var j=m.a.div(h()),E=m()(d.a)(O()),y=m.a.div(v()),x=m.a.div(g()),w=function(n){var e=n.user,t=n.onLogout;return(c.a.createElement(c.a.Fragment,null,c.a.createElement(j,null,c.a.createElement(E,null,c.a.createElement(b.Link,{to:"/",className:"logo"},"REACTERS"),c.a.createElement("div",{className:"right"},e?c.a.createElement(c.a.Fragment,null,c.a.createElement(x,null,e.username),c.a.createElement(p.a,{onClick:t},"로그아웃")):c.a.createElement(p.a,{to:"/login"},"로그인")))),c.a.createElement(y,null)))},k=t(5);e.a=function(){var n=Object(b.useHistory)(),e=Object(o.useRecoilState)(l.b),t=Object(r.a)(e,2),s=t[0],f=t[1],m=Object(u.a)(i.c),d=Object(r.a)(m,1)[0],p=Object(a.useCallback)((function(){d(),f(null),localStorage.removeItem(k.b.BLOG_USER_DATA),n.push("/")}),[d,f,n]);return c.a.createElement(w,{user:s,onLogout:p})}}};
+exports.ids = [3];
+exports.modules = {
+
+/***/ 24:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
+
+// EXTERNAL MODULE: external "react"
+var external_react_ = __webpack_require__(0);
+var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
+
+// EXTERNAL MODULE: ./src/containers/common/HeaderContainer.tsx + 1 modules
+var HeaderContainer = __webpack_require__(47);
+
+// EXTERNAL MODULE: ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/regenerator/index.js
+var regenerator = __webpack_require__(2);
+var regenerator_default = /*#__PURE__*/__webpack_require__.n(regenerator);
+
+// EXTERNAL MODULE: ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js
+var asyncToGenerator = __webpack_require__(4);
+
+// EXTERNAL MODULE: ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/slicedToArray.js + 3 modules
+var slicedToArray = __webpack_require__(14);
+
+// EXTERNAL MODULE: external "react-router-dom"
+var external_react_router_dom_ = __webpack_require__(1);
+
+// EXTERNAL MODULE: external "recoil"
+var external_recoil_ = __webpack_require__(3);
+
+// EXTERNAL MODULE: ./src/store/user.ts
+var store_user = __webpack_require__(15);
+
+// EXTERNAL MODULE: ./src/store/post.ts
+var store_post = __webpack_require__(40);
+
+// EXTERNAL MODULE: ./src/lib/apis/post.ts
+var apis_post = __webpack_require__(39);
+
+// EXTERNAL MODULE: ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/taggedTemplateLiteral.js
+var taggedTemplateLiteral = __webpack_require__(32);
+
+// EXTERNAL MODULE: external "styled-components"
+var external_styled_components_ = __webpack_require__(9);
+var external_styled_components_default = /*#__PURE__*/__webpack_require__.n(external_styled_components_);
+
+// EXTERNAL MODULE: external "react-helmet-async"
+var external_react_helmet_async_ = __webpack_require__(17);
+
+// EXTERNAL MODULE: ./src/lib/styles/palette.ts
+var palette = __webpack_require__(33);
+
+// EXTERNAL MODULE: ./src/components/common/Responsive.tsx + 2 modules
+var Responsive = __webpack_require__(37);
+
+// EXTERNAL MODULE: ./src/components/common/SubInfo.tsx
+var SubInfo = __webpack_require__(41);
+
+// EXTERNAL MODULE: ./src/components/common/Tags.tsx
+var Tags = __webpack_require__(42);
+
+// CONCATENATED MODULE: ./src/components/post/PostViewer.tsx
+
+
+function _templateObject3() {
+  var data = Object(taggedTemplateLiteral["a" /* default */])(["\n  font-size: 1.3125rem;\n  color: ", ";\n"]);
+
+  _templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject2() {
+  var data = Object(taggedTemplateLiteral["a" /* default */])(["\n  border-bottom: 1px solid ", ";\n  padding-bottom: 3rem;\n  margin-bottom: 3rem;\n  h1 {\n    font-size: 3rem;\n    line-height: 1.5;\n    margin: 0;\n  }\n"]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject() {
+  var data = Object(taggedTemplateLiteral["a" /* default */])(["\n  margin-top: 4rem;\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+
+
+
+
+
+
+
+
+var PostViewer_PostViewer = function PostViewer(_ref) {
+  var post = _ref.post,
+      actionButtons = _ref.actionButtons;
+
+  if (!post) {
+    return null;
+  }
+
+  var title = post.title,
+      body = post.body,
+      user = post.user,
+      publishedDate = post.publishedDate,
+      tags = post.tags;
+  return /*#__PURE__*/external_react_default.a.createElement(PostViewerBlock, null, /*#__PURE__*/external_react_default.a.createElement(external_react_helmet_async_["Helmet"], null, /*#__PURE__*/external_react_default.a.createElement("title", null, title, " - REACTERS")), /*#__PURE__*/external_react_default.a.createElement(PostHead, null, /*#__PURE__*/external_react_default.a.createElement("h1", null, title), /*#__PURE__*/external_react_default.a.createElement(SubInfo["a" /* default */], {
+    username: user.username,
+    publishedDate: publishedDate,
+    hasMarginTop: true
+  }), /*#__PURE__*/external_react_default.a.createElement(Tags["a" /* default */], {
+    tags: tags
+  })), actionButtons, /*#__PURE__*/external_react_default.a.createElement(PostContent, {
+    dangerouslySetInnerHTML: {
+      __html: body
+    }
+  }));
+};
+
+/* harmony default export */ var post_PostViewer = (PostViewer_PostViewer);
+var PostViewerBlock = external_styled_components_default()(Responsive["a" /* default */])(_templateObject());
+var PostHead = external_styled_components_default.a.div(_templateObject2(), palette["a" /* default */].gray[2]);
+var PostContent = external_styled_components_default.a.div(_templateObject3(), palette["a" /* default */].gray[8]);
+// CONCATENATED MODULE: ./src/components/post/PostViewerError.tsx
+
+
+function PostViewerError_templateObject() {
+  var data = Object(taggedTemplateLiteral["a" /* default */])(["\n  margin-top: 4rem;\n"]);
+
+  PostViewerError_templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+
+
+
+
+var PostViewerError_PostViewerError = function PostViewerError() {
+  return /*#__PURE__*/external_react_default.a.createElement(PostViewerError_PostViewerBlock, null, "\uC874\uC7AC\uD558\uC9C0 \uC54A\uB294 \uD3EC\uC2A4\uD2B8\uC785\uB2C8\uB2E4.");
+};
+
+/* harmony default export */ var post_PostViewerError = (PostViewerError_PostViewerError);
+var PostViewerError_PostViewerBlock = external_styled_components_default()(Responsive["a" /* default */])(PostViewerError_templateObject());
+// EXTERNAL MODULE: ./src/components/common/Button.tsx
+var Button = __webpack_require__(34);
+
+// CONCATENATED MODULE: ./src/components/common/AskModal.tsx
+
+
+function AskModal_templateObject3() {
+  var data = Object(taggedTemplateLiteral["a" /* default */])(["\n  height: 2rem;\n  & + & {\n    margin-left: 0.75rem;\n  }\n"]);
+
+  AskModal_templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function AskModal_templateObject2() {
+  var data = Object(taggedTemplateLiteral["a" /* default */])(["\n  width: 320px;\n  background: white;\n  padding: 1.5rem;\n  border-radius: 4px;\n  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.125);\n  h2 {\n    margin-top: 0;\n    margin-bottom: 1rem;\n  }\n  p {\n    margin-bottom: 3rem;\n  }\n  .buttons {\n    display: flex;\n    justify-content: flex-end;\n  }\n"]);
+
+  AskModal_templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function AskModal_templateObject() {
+  var data = Object(taggedTemplateLiteral["a" /* default */])(["\n  position: fixed;\n  z-index: 30;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  background: rgba(0, 0, 0, 0.25);\n  display: flex;\n  justify-content: center;\n  align-items: center;\n"]);
+
+  AskModal_templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+
+
+
+
+var AskModal_AskModal = function AskModal(_ref) {
+  var visible = _ref.visible,
+      title = _ref.title,
+      description = _ref.description,
+      _ref$confirmText = _ref.confirmText,
+      confirmText = _ref$confirmText === void 0 ? '확인' : _ref$confirmText,
+      _ref$cancelText = _ref.cancelText,
+      cancelText = _ref$cancelText === void 0 ? '취소' : _ref$cancelText,
+      onConfirm = _ref.onConfirm,
+      onCancel = _ref.onCancel;
+  if (!visible) return null;
+  return /*#__PURE__*/external_react_default.a.createElement(Fullscreen, null, /*#__PURE__*/external_react_default.a.createElement(AskModalBlock, null, /*#__PURE__*/external_react_default.a.createElement("h2", null, title), /*#__PURE__*/external_react_default.a.createElement("p", null, description), /*#__PURE__*/external_react_default.a.createElement("div", {
+    className: "buttons"
+  }, /*#__PURE__*/external_react_default.a.createElement(StyledButton, {
+    onClick: onCancel
+  }, cancelText), /*#__PURE__*/external_react_default.a.createElement(StyledButton, {
+    cyan: true,
+    onClick: onConfirm
+  }, confirmText))));
+};
+
+/* harmony default export */ var common_AskModal = (AskModal_AskModal);
+var Fullscreen = external_styled_components_default.a.div(AskModal_templateObject());
+var AskModalBlock = external_styled_components_default.a.div(AskModal_templateObject2());
+var StyledButton = external_styled_components_default()(Button["a" /* default */])(AskModal_templateObject3());
+// CONCATENATED MODULE: ./src/components/post/AskRemoveModal.tsx
+
+
+
+var AskRemoveModal_AskRemoveModal = function AskRemoveModal(_ref) {
+  var visible = _ref.visible,
+      onConfirm = _ref.onConfirm,
+      onCancel = _ref.onCancel;
+  return /*#__PURE__*/external_react_default.a.createElement(common_AskModal, {
+    visible: visible,
+    title: "\uD3EC\uC2A4\uD2B8 \uC0AD\uC81C",
+    description: "\uD3EC\uC2A4\uD2B8\uB97C \uC815\uB9D0 \uC0AD\uC81C\uD558\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?",
+    confirmText: "\uC0AD\uC81C",
+    onConfirm: onConfirm,
+    onCancel: onCancel
+  });
+};
+
+/* harmony default export */ var post_AskRemoveModal = (AskRemoveModal_AskRemoveModal);
+// CONCATENATED MODULE: ./src/components/post/PostActionButtons.tsx
+
+
+
+function PostActionButtons_templateObject2() {
+  var data = Object(taggedTemplateLiteral["a" /* default */])(["\n  padding: 0.25rem 0.5rem;\n  border-radius: 4px;\n  color: ", ";\n  font-weight: bold;\n  border: none;\n  outline: none;\n  font-size: 0.875rem;\n  cursor: pointer;\n  &:hover {\n    background: ", ";\n    color: ", ";\n  }\n  & + & {\n    margin-left: 0.25rem;\n  }\n"]);
+
+  PostActionButtons_templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function PostActionButtons_templateObject() {
+  var data = Object(taggedTemplateLiteral["a" /* default */])(["\n  display: flex;\n  justify-content: flex-end;\n  margin-bottom: 2rem;\n  margin-top: -1.5rem;\n"]);
+
+  PostActionButtons_templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+
+
+
+
+
+var PostActionButtons_PostActionButtons = function PostActionButtons(_ref) {
+  var onEdit = _ref.onEdit,
+      onRemove = _ref.onRemove;
+
+  var _useState = Object(external_react_["useState"])(false),
+      _useState2 = Object(slicedToArray["a" /* default */])(_useState, 2),
+      modal = _useState2[0],
+      setModal = _useState2[1];
+
+  var onRemoveClick = function onRemoveClick() {
+    setModal(true);
+  };
+
+  var onCancel = function onCancel() {
+    setModal(false);
+  };
+
+  var onConfirm = function onConfirm() {
+    setModal(false);
+    onRemove();
+  };
+
+  return /*#__PURE__*/external_react_default.a.createElement(external_react_default.a.Fragment, null, /*#__PURE__*/external_react_default.a.createElement(PostActionButtonsBlock, null, /*#__PURE__*/external_react_default.a.createElement(ActionButton, {
+    onClick: onEdit
+  }, "\uC218\uC815"), /*#__PURE__*/external_react_default.a.createElement(ActionButton, {
+    onClick: onRemoveClick
+  }, "\uC0AD\uC81C")), /*#__PURE__*/external_react_default.a.createElement(post_AskRemoveModal, {
+    visible: modal,
+    onConfirm: onConfirm,
+    onCancel: onCancel
+  }));
+};
+
+/* harmony default export */ var post_PostActionButtons = (PostActionButtons_PostActionButtons);
+var PostActionButtonsBlock = external_styled_components_default.a.div(PostActionButtons_templateObject());
+var ActionButton = external_styled_components_default.a.button(PostActionButtons_templateObject2(), palette["a" /* default */].gray[6], palette["a" /* default */].gray[1], palette["a" /* default */].cyan[7]);
+// CONCATENATED MODULE: ./src/containers/post/PostViewerContainer.tsx
+
+
+
+
+
+
+
+
+
+
+
+
+
+var PostViewerContainer_PostViewerContainer = function PostViewerContainer(_ref) {
+  var match = _ref.match;
+  var postId = match.params.postId;
+  var history = Object(external_react_router_dom_["useHistory"])();
+  var user = Object(external_recoil_["useRecoilValue"])(store_user["b" /* userState */]);
+  var post = Object(external_recoil_["useRecoilValue"])(store_post["b" /* postState */]);
+  var resetPost = Object(external_recoil_["useResetRecoilState"])(store_post["b" /* postState */]);
+  var resetEditForm = Object(external_recoil_["useResetRecoilState"])(store_post["a" /* editorFormState */]);
+
+  var _useRecoilStateLoadab = Object(external_recoil_["useRecoilStateLoadable"])(Object(store_post["c" /* readPostQuery */])(postId)),
+      _useRecoilStateLoadab2 = Object(slicedToArray["a" /* default */])(_useRecoilStateLoadab, 2),
+      readPostLoadable = _useRecoilStateLoadab2[0],
+      setReadPostLoadable = _useRecoilStateLoadab2[1];
+
+  Object(external_react_["useEffect"])(function () {
+    if (readPostLoadable.state === 'hasValue') {
+      setReadPostLoadable(readPostLoadable.contents);
+    }
+
+    return function () {
+      resetPost();
+      resetEditForm();
+    }; // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [readPostLoadable.state, resetEditForm, resetPost]);
+  var ownPost = (user && user._id) === (post && post.user._id);
+  var onEdit = Object(external_react_["useCallback"])(function () {
+    if (!post) return;
+    history.push("/write/".concat(postId)); // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [post]);
+  var onRemove = Object(external_react_["useCallback"])( /*#__PURE__*/Object(asyncToGenerator["a" /* default */])( /*#__PURE__*/regenerator_default.a.mark(function _callee() {
+    return regenerator_default.a.wrap(function _callee$(_context) {
+      while (1) {
+        switch (_context.prev = _context.next) {
+          case 0:
+            _context.prev = 0;
+            _context.next = 3;
+            return Object(apis_post["c" /* removePostAPI */])(postId);
+
+          case 3:
+            history.push('/'); // 홈으로 이동
+
+            _context.next = 9;
+            break;
+
+          case 6:
+            _context.prev = 6;
+            _context.t0 = _context["catch"](0);
+            console.error(_context.t0);
+
+          case 9:
+          case "end":
+            return _context.stop();
+        }
+      }
+    }, _callee, null, [[0, 6]]);
+  })), []);
+
+  switch (readPostLoadable.state) {
+    case 'hasError':
+      return /*#__PURE__*/external_react_default.a.createElement(post_PostViewerError, null);
+
+    case 'loading':
+      return null;
+
+    case 'hasValue':
+      return /*#__PURE__*/external_react_default.a.createElement(post_PostViewer, {
+        post: readPostLoadable.contents,
+        actionButtons: ownPost && /*#__PURE__*/external_react_default.a.createElement(post_PostActionButtons, {
+          onEdit: onEdit,
+          onRemove: onRemove
+        })
+      });
+  }
+};
+
+/* harmony default export */ var post_PostViewerContainer = (PostViewerContainer_PostViewerContainer);
+// CONCATENATED MODULE: ./src/pages/PostPage.tsx
+
+
+
+
+var PostPage_PostPage = function PostPage(_ref) {
+  var match = _ref.match;
+  return /*#__PURE__*/external_react_default.a.createElement("div", null, /*#__PURE__*/external_react_default.a.createElement(HeaderContainer["a" /* default */], null), /*#__PURE__*/external_react_default.a.createElement(post_PostViewerContainer, {
+    match: match
+  }));
+};
+
+/* harmony default export */ var pages_PostPage = __webpack_exports__["default"] = (PostPage_PostPage);
+
+/***/ }),
+
+/***/ 32:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _taggedTemplateLiteral; });
+function _taggedTemplateLiteral(strings, raw) {
+  if (!raw) {
+    raw = strings.slice(0);
+  }
+
+  return Object.freeze(Object.defineProperties(strings, {
+    raw: {
+      value: Object.freeze(raw)
+    }
+  }));
+}
+
+/***/ }),
+
+/***/ 33:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+var palette = {
+  gray: ['#f8f9fa', '#f1f3f5', '#e9ecef', '#dee2e6', '#ced4da', '#adb5bd', '#868e96', '#495057', '#343a40', '#212529'],
+  cyan: ['#e3fafc', '#c5f6fa', '#99e9f2', '#66d9e8', '#3bc9db', '#22b8cf', '#15aabf', '#1098ad', '#0c8599', '#0b7285']
+};
+/* harmony default export */ __webpack_exports__["a"] = (palette);
+
+/***/ }),
+
+/***/ 34:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var _Users_ominseob_Project_ReactProject_blog_blog_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(32);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(0);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(9);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _lib_styles_palette__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(33);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(1);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_router_dom__WEBPACK_IMPORTED_MODULE_4__);
+
+
+function _templateObject5() {
+  var data = Object(_Users_ominseob_Project_ReactProject_blog_blog_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(["\n  ", "\n"]);
+
+  _templateObject5 = function _templateObject5() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject4() {
+  var data = Object(_Users_ominseob_Project_ReactProject_blog_blog_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(["\n  ", "\n"]);
+
+  _templateObject4 = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject3() {
+  var data = Object(_Users_ominseob_Project_ReactProject_blog_blog_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(["\n      background: ", ";\n      &:hover {\n        background: ", ";\n      }\n    "]);
+
+  _templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject2() {
+  var data = Object(_Users_ominseob_Project_ReactProject_blog_blog_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(["\n      padding-top: 0.75rem;\n      padding-bottom: 0.75rem;\n      width: 100%;\n      font-size: 1.125rem;\n    "]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject() {
+  var data = Object(_Users_ominseob_Project_ReactProject_blog_blog_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(["\n  border: none;\n  border-radius: 4px;\n  font-size: 1rem;\n  font-weight: bold;\n  padding: 0.25rem 1rem;\n  color: white;\n  outline: none;\n  cursor: pointer;\n  background: ", ";\n  &:hover {\n    background: ", ";\n  }\n  ", "\n  ", "\n    &:disabled {\n    background: ", ";\n    color: ", ";\n    cursor: not-allowed;\n  }\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+
+
+
+
+
+var Button = function Button(props) {
+  return props.to ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(StyledLink, Object.assign({}, props, {
+    to: props.to,
+    cyan: props.cyan ? 'true' : ''
+  })) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(StyledButton, props);
+};
+
+/* harmony default export */ __webpack_exports__["a"] = (Button);
+var buttonStyle = Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["css"])(_templateObject(), _lib_styles_palette__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"].gray[8], _lib_styles_palette__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"].gray[6], function (props) {
+  return props.fullwidth && Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["css"])(_templateObject2());
+}, function (props) {
+  return props.cyan && Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["css"])(_templateObject3(), _lib_styles_palette__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"].cyan[5], _lib_styles_palette__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"].cyan[4]);
+}, _lib_styles_palette__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"].gray[3], _lib_styles_palette__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"].gray[5]);
+var StyledButton = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.button(_templateObject4(), buttonStyle);
+var StyledLink = styled_components__WEBPACK_IMPORTED_MODULE_2___default()(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Link"])(_templateObject5(), buttonStyle);
+
+/***/ }),
+
+/***/ 37:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+
+// EXTERNAL MODULE: ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/taggedTemplateLiteral.js
+var taggedTemplateLiteral = __webpack_require__(32);
+
+// CONCATENATED MODULE: ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js
+function _objectWithoutPropertiesLoose(source, excluded) {
+  if (source == null) return {};
+  var target = {};
+  var sourceKeys = Object.keys(source);
+  var key, i;
+
+  for (i = 0; i < sourceKeys.length; i++) {
+    key = sourceKeys[i];
+    if (excluded.indexOf(key) >= 0) continue;
+    target[key] = source[key];
+  }
+
+  return target;
+}
+// CONCATENATED MODULE: ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js
+
+function _objectWithoutProperties(source, excluded) {
+  if (source == null) return {};
+  var target = _objectWithoutPropertiesLoose(source, excluded);
+  var key, i;
+
+  if (Object.getOwnPropertySymbols) {
+    var sourceSymbolKeys = Object.getOwnPropertySymbols(source);
+
+    for (i = 0; i < sourceSymbolKeys.length; i++) {
+      key = sourceSymbolKeys[i];
+      if (excluded.indexOf(key) >= 0) continue;
+      if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue;
+      target[key] = source[key];
+    }
+  }
+
+  return target;
+}
+// EXTERNAL MODULE: external "react"
+var external_react_ = __webpack_require__(0);
+var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
+
+// EXTERNAL MODULE: external "styled-components"
+var external_styled_components_ = __webpack_require__(9);
+var external_styled_components_default = /*#__PURE__*/__webpack_require__.n(external_styled_components_);
+
+// CONCATENATED MODULE: ./src/components/common/Responsive.tsx
+
+
+
+function _templateObject() {
+  var data = Object(taggedTemplateLiteral["a" /* default */])(["\n  padding-left: 1rem;\n  padding-right: 1rem;\n  width: 1024px;\n  margin: 0 auto; /* \uC911\uC559 \uC815\uB82C */\n  /* \uBE0C\uB77C\uC6B0\uC800 \uD06C\uAE30\uC5D0 \uB530\uB77C \uAC00\uB85C \uC0AC\uC774\uC988 \uBCC0\uACBD */\n  @media (max-width: 1024px) {\n    width: 768px;\n  }\n  @media (max-width: 768px) {\n    width: 100%;\n  }\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+
+
+
+var Responsive_Responsive = function Responsive(_ref) {
+  var children = _ref.children,
+      rest = _objectWithoutProperties(_ref, ["children"]);
+
+  return /*#__PURE__*/external_react_default.a.createElement(ResponsiveBlock, rest, children);
+};
+
+var ResponsiveBlock = external_styled_components_default.a.div(_templateObject());
+/* harmony default export */ var common_Responsive = __webpack_exports__["a"] = (Responsive_Responsive);
+
+/***/ }),
+
+/***/ 38:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return useRequest; });
+/* harmony import */ var _Users_ominseob_Project_ReactProject_blog_blog_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
+/* harmony import */ var _Users_ominseob_Project_ReactProject_blog_blog_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_Users_ominseob_Project_ReactProject_blog_blog_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Users_ominseob_Project_ReactProject_blog_blog_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(4);
+/* harmony import */ var _Users_ominseob_Project_ReactProject_blog_blog_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(14);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(0);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
+
+
+
+
+function useRequest(promiseCreator) {
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])(false),
+      _useState2 = Object(_Users_ominseob_Project_ReactProject_blog_blog_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"])(_useState, 2),
+      loading = _useState2[0],
+      setLoading = _useState2[1];
+
+  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])(null),
+      _useState4 = Object(_Users_ominseob_Project_ReactProject_blog_blog_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"])(_useState3, 2),
+      data = _useState4[0],
+      setData = _useState4[1];
+
+  var _useState5 = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])(null),
+      _useState6 = Object(_Users_ominseob_Project_ReactProject_blog_blog_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"])(_useState5, 2),
+      error = _useState6[0],
+      setError = _useState6[1];
+
+  var onRequest = Object(react__WEBPACK_IMPORTED_MODULE_3__["useCallback"])( /*#__PURE__*/Object(_Users_ominseob_Project_ReactProject_blog_blog_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"])( /*#__PURE__*/_Users_ominseob_Project_ReactProject_blog_blog_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
+    var response,
+        _args = arguments;
+    return _Users_ominseob_Project_ReactProject_blog_blog_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
+      while (1) {
+        switch (_context.prev = _context.next) {
+          case 0:
+            _context.prev = 0;
+            setLoading(true);
+            _context.next = 4;
+            return promiseCreator.apply(void 0, _args);
+
+          case 4:
+            response = _context.sent;
+            setData(response.data);
+            _context.next = 12;
+            break;
+
+          case 8:
+            _context.prev = 8;
+            _context.t0 = _context["catch"](0);
+            setError(_context.t0);
+            throw _context.t0;
+
+          case 12:
+            setLoading(false);
+
+          case 13:
+          case "end":
+            return _context.stop();
+        }
+      }
+    }, _callee, null, [[0, 8]]);
+  })), // eslint-disable-next-line react-hooks/exhaustive-deps
+  []);
+
+  var onReset = function onReset() {
+    setLoading(false);
+    setData(null);
+    setError(null);
+  };
+
+  return [onRequest, loading, data, error, onReset];
+}
+
+/***/ }),
+
+/***/ 39:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return writePostAPI; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return readPostAPI; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return listPostsAPI; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return removePostAPI; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return updatePostAPI; });
+/* harmony import */ var _apiClient__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7);
+/* harmony import */ var qs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(29);
+/* harmony import */ var qs__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(qs__WEBPACK_IMPORTED_MODULE_1__);
+
+
+var writePostAPI = function writePostAPI(_ref) {
+  var title = _ref.title,
+      body = _ref.body,
+      tags = _ref.tags;
+  return _apiClient__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].post('/api/posts', {
+    title: title,
+    body: body,
+    tags: tags
+  });
+};
+var readPostAPI = function readPostAPI(id) {
+  return _apiClient__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].get("/api/posts/".concat(id));
+};
+var listPostsAPI = function listPostsAPI(_ref2) {
+  var page = _ref2.page,
+      username = _ref2.username,
+      tag = _ref2.tag;
+  var queryString = qs__WEBPACK_IMPORTED_MODULE_1___default.a.stringify({
+    page: page,
+    username: username,
+    tag: tag
+  });
+  return _apiClient__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].get("/api/posts?".concat(queryString));
+};
+var removePostAPI = function removePostAPI(id) {
+  return _apiClient__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].delete("/api/posts/".concat(id));
+};
+var updatePostAPI = function updatePostAPI(_ref3) {
+  var id = _ref3.id,
+      title = _ref3.title,
+      body = _ref3.body,
+      tags = _ref3.tags;
+  return _apiClient__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].patch("/api/posts/".concat(id), {
+    title: title,
+    body: body,
+    tags: tags
+  });
+};
+
+/***/ }),
+
+/***/ 40:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return editorFormState; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return postState; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return readPostQuery; });
+/* harmony import */ var _Users_ominseob_Project_ReactProject_blog_blog_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
+/* harmony import */ var _Users_ominseob_Project_ReactProject_blog_blog_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_Users_ominseob_Project_ReactProject_blog_blog_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Users_ominseob_Project_ReactProject_blog_blog_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(4);
+/* harmony import */ var recoil__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(3);
+/* harmony import */ var recoil__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(recoil__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _lib_contants__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(6);
+/* harmony import */ var _lib_apis_post__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(39);
+
+
+
+
+
+var editorFormState = Object(recoil__WEBPACK_IMPORTED_MODULE_2__["atom"])({
+  key: _lib_contants__WEBPACK_IMPORTED_MODULE_3__[/* RECOIL_KEY */ "a"].EDITOR_DATA,
+  default: {
+    title: '',
+    body: '',
+    tags: []
+  }
+});
+var postState = Object(recoil__WEBPACK_IMPORTED_MODULE_2__["atom"])({
+  key: _lib_contants__WEBPACK_IMPORTED_MODULE_3__[/* RECOIL_KEY */ "a"].READ_POST_DATA,
+  default: null
+});
+var readPostQuery = Object(recoil__WEBPACK_IMPORTED_MODULE_2__["selectorFamily"])({
+  key: _lib_contants__WEBPACK_IMPORTED_MODULE_3__[/* RECOIL_KEY */ "a"].LIST_POSTS_QUERY,
+  get: function get(postId) {
+    return /*#__PURE__*/Object(_Users_ominseob_Project_ReactProject_blog_blog_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"])( /*#__PURE__*/_Users_ominseob_Project_ReactProject_blog_blog_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
+      var response;
+      return _Users_ominseob_Project_ReactProject_blog_blog_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
+        while (1) {
+          switch (_context.prev = _context.next) {
+            case 0:
+              if (postId) {
+                _context.next = 2;
+                break;
+              }
+
+              return _context.abrupt("return", null);
+
+            case 2:
+              _context.prev = 2;
+              _context.next = 5;
+              return Object(_lib_apis_post__WEBPACK_IMPORTED_MODULE_4__[/* readPostAPI */ "b"])(postId);
+
+            case 5:
+              response = _context.sent;
+              return _context.abrupt("return", response.data);
+
+            case 9:
+              _context.prev = 9;
+              _context.t0 = _context["catch"](2);
+              console.error(_context.t0);
+              throw _context.t0;
+
+            case 13:
+            case "end":
+              return _context.stop();
+          }
+        }
+      }, _callee, null, [[2, 9]]);
+    }));
+  },
+  set: function set(postId) {
+    return function (_ref2, newValue) {
+      var set = _ref2.set;
+      if (!newValue) return;
+      var postData = newValue;
+      set(postState, postData);
+      set(editorFormState, {
+        title: postData.title,
+        body: postData.body,
+        tags: postData.tags
+      });
+    };
+  }
+});
+
+/***/ }),
+
+/***/ 41:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var _Users_ominseob_Project_ReactProject_blog_blog_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(32);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(0);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(9);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(1);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_router_dom__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _lib_styles_palette__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(33);
+
+
+function _templateObject2() {
+  var data = Object(_Users_ominseob_Project_ReactProject_blog_blog_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(["\n      margin-top: 1rem;\n    "]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject() {
+  var data = Object(_Users_ominseob_Project_ReactProject_blog_blog_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(["\n  ", "\n  color: ", ";\n  /* span \uC0AC\uC774\uC5D0 \uAC00\uC6B4\uB383\uC810 \uBB38\uC790 \uBCF4\uC5EC\uC8FC\uAE30*/\n  span + span:before {\n    color: ", ";\n    padding-left: 0.25rem;\n    padding-right: 0.25rem;\n    content: '\\B7'; /* \uAC00\uC6B4\uB383\uC810 \uBB38\uC790 */\n  }\n"], ["\n  ", "\n  color: ", ";\n  /* span \uC0AC\uC774\uC5D0 \uAC00\uC6B4\uB383\uC810 \uBB38\uC790 \uBCF4\uC5EC\uC8FC\uAE30*/\n  span + span:before {\n    color: ", ";\n    padding-left: 0.25rem;\n    padding-right: 0.25rem;\n    content: '\\\\B7'; /* \uAC00\uC6B4\uB383\uC810 \uBB38\uC790 */\n  }\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+
+
+
+
+
+var SubInfo = function SubInfo(_ref) {
+  var username = _ref.username,
+      publishedDate = _ref.publishedDate,
+      hasMarginTop = _ref.hasMarginTop;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(SubInfoBlock, {
+    hasMarginTop: hasMarginTop
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("b", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+    to: "/@".concat(username)
+  }, username))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, new Date(publishedDate).toLocaleDateString()));
+};
+
+/* harmony default export */ __webpack_exports__["a"] = (SubInfo);
+var SubInfoBlock = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div(_templateObject(), function (props) {
+  return props.hasMarginTop && Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["css"])(_templateObject2());
+}, _lib_styles_palette__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"].gray[6], _lib_styles_palette__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"].gray[4]);
+
+/***/ }),
+
+/***/ 42:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var _Users_ominseob_Project_ReactProject_blog_blog_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(32);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(0);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(9);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _lib_styles_palette__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(33);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(1);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_router_dom__WEBPACK_IMPORTED_MODULE_4__);
+
+
+function _templateObject() {
+  var data = Object(_Users_ominseob_Project_ReactProject_blog_blog_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(["\n  margin-top: 0.5rem;\n  .tag {\n    display: inline-block;\n    color: ", ";\n    text-decoration: none;\n    margin-right: 0.5rem;\n    &:hover {\n      color: ", ";\n    }\n  }\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+
+
+
+
+
+var Tags = function Tags(_ref) {
+  var tags = _ref.tags;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(TagsBlock, null, tags.map(function (tag) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Link"], {
+      className: "tag",
+      to: "/?tag=".concat(tag),
+      key: tag
+    }, "#", tag);
+  }));
+};
+
+/* harmony default export */ __webpack_exports__["a"] = (Tags);
+var TagsBlock = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div(_templateObject(), _lib_styles_palette__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"].cyan[7], _lib_styles_palette__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"].cyan[6]);
+
+/***/ }),
+
+/***/ 47:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+
+// EXTERNAL MODULE: ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/slicedToArray.js + 3 modules
+var slicedToArray = __webpack_require__(14);
+
+// EXTERNAL MODULE: external "react"
+var external_react_ = __webpack_require__(0);
+var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
+
+// EXTERNAL MODULE: external "recoil"
+var external_recoil_ = __webpack_require__(3);
+
+// EXTERNAL MODULE: ./src/lib/hooks/useRequest.tsx
+var useRequest = __webpack_require__(38);
+
+// EXTERNAL MODULE: ./src/lib/apis/auth.ts
+var auth = __webpack_require__(16);
+
+// EXTERNAL MODULE: ./src/store/user.ts
+var store_user = __webpack_require__(15);
+
+// EXTERNAL MODULE: ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/taggedTemplateLiteral.js
+var taggedTemplateLiteral = __webpack_require__(32);
+
+// EXTERNAL MODULE: external "styled-components"
+var external_styled_components_ = __webpack_require__(9);
+var external_styled_components_default = /*#__PURE__*/__webpack_require__.n(external_styled_components_);
+
+// EXTERNAL MODULE: external "react-router-dom"
+var external_react_router_dom_ = __webpack_require__(1);
+
+// EXTERNAL MODULE: ./src/components/common/Responsive.tsx + 2 modules
+var Responsive = __webpack_require__(37);
+
+// EXTERNAL MODULE: ./src/components/common/Button.tsx
+var Button = __webpack_require__(34);
+
+// CONCATENATED MODULE: ./src/components/common/Header.tsx
+
+
+function _templateObject4() {
+  var data = Object(taggedTemplateLiteral["a" /* default */])(["\n  font-weight: 800;\n  margin-right: 1rem;\n"]);
+
+  _templateObject4 = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject3() {
+  var data = Object(taggedTemplateLiteral["a" /* default */])(["\n  height: 4rem;\n"]);
+
+  _templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject2() {
+  var data = Object(taggedTemplateLiteral["a" /* default */])(["\n  height: 4rem;\n  display: flex;\n  align-items: center;\n  justify-content: space-between; /* \uC790\uC2DD \uC5D8\uB9AC\uBA3C\uD2B8 \uC0AC\uC774\uC5D0 \uC5EC\uBC31\uC744 \uCD5C\uB300\uB85C \uC124\uC815 */\n  .logo {\n    font-size: 1.125rem;\n    font-weight: 800;\n    letter-spacing: 2px;\n  }\n  .right {\n    display: flex;\n    align-items: center;\n  }\n"]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject() {
+  var data = Object(taggedTemplateLiteral["a" /* default */])(["\n  position: fixed;\n  width: 100%;\n  background: white;\n  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+
+
+
+
+
+
+var Header_Header = function Header(_ref) {
+  var user = _ref.user,
+      onLogout = _ref.onLogout;
+  return /*#__PURE__*/external_react_default.a.createElement(external_react_default.a.Fragment, null, /*#__PURE__*/external_react_default.a.createElement(HeaderBlock, null, /*#__PURE__*/external_react_default.a.createElement(Wrapper, null, /*#__PURE__*/external_react_default.a.createElement(external_react_router_dom_["Link"], {
+    to: "/",
+    className: "logo"
+  }, "REACTERS"), /*#__PURE__*/external_react_default.a.createElement("div", {
+    className: "right"
+  }, user ? /*#__PURE__*/external_react_default.a.createElement(external_react_default.a.Fragment, null, /*#__PURE__*/external_react_default.a.createElement(UserInfo, null, user.username), /*#__PURE__*/external_react_default.a.createElement(Button["a" /* default */], {
+    onClick: onLogout
+  }, "\uB85C\uADF8\uC544\uC6C3")) : /*#__PURE__*/external_react_default.a.createElement(Button["a" /* default */], {
+    to: "/login"
+  }, "\uB85C\uADF8\uC778")))), /*#__PURE__*/external_react_default.a.createElement(Spacer, null));
+};
+
+var HeaderBlock = external_styled_components_default.a.div(_templateObject());
+/**
+ * Responsive 컴포넌트의 속성에 스타일을 추가해서 새로운 컴포넌트 생성
+ */
+
+var Wrapper = external_styled_components_default()(Responsive["a" /* default */])(_templateObject2());
+/**
+ * 헤더가 fixed로 되어 있기 때문에 페이지의 컨텐츠가 4rem 아래 나타나도록 해주는 컴포넌트
+ */
+
+var Spacer = external_styled_components_default.a.div(_templateObject3());
+var UserInfo = external_styled_components_default.a.div(_templateObject4());
+/* harmony default export */ var common_Header = (Header_Header);
+// EXTERNAL MODULE: ./src/lib/contants.ts
+var contants = __webpack_require__(6);
+
+// CONCATENATED MODULE: ./src/containers/common/HeaderContainer.tsx
+
+
+
+
+
+
+
+
+
+
+var HeaderContainer_HeaderContainer = function HeaderContainer() {
+  var history = Object(external_react_router_dom_["useHistory"])();
+
+  var _useRecoilState = Object(external_recoil_["useRecoilState"])(store_user["b" /* userState */]),
+      _useRecoilState2 = Object(slicedToArray["a" /* default */])(_useRecoilState, 2),
+      user = _useRecoilState2[0],
+      setUser = _useRecoilState2[1];
+
+  var _useRequest = Object(useRequest["a" /* default */])(auth["c" /* logoutAPI */]),
+      _useRequest2 = Object(slicedToArray["a" /* default */])(_useRequest, 1),
+      _logout = _useRequest2[0];
+
+  var onLogout = Object(external_react_["useCallback"])(function () {
+    _logout();
+
+    setUser(null);
+    localStorage.removeItem(contants["b" /* STORAGE_KEY */].BLOG_USER_DATA);
+    history.push('/');
+  }, [_logout, setUser, history]);
+  return /*#__PURE__*/external_react_default.a.createElement(common_Header, {
+    user: user,
+    onLogout: onLogout
+  });
+};
+
+/* harmony default export */ var common_HeaderContainer = __webpack_exports__["a"] = (HeaderContainer_HeaderContainer);
+
+/***/ })
+
+};;

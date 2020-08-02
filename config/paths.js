@@ -90,7 +90,7 @@ module.exports = {
   appNodeModules: resolveApp('node_modules'),
   publicUrlOrPath,
   servedPath: getServedPath(resolveApp('package.json')),
-  ssrIndexJs: resolveApp('src/index.server.tsx'), // 서버 사이드 렌더링 엔트리
+  ssrIndexJs: resolveApp('src/index.server.ts'), // 서버 사이드 렌더링 엔트리
   ssrBuild: resolveApp('dist'),
 };
 

@@ -3,7 +3,7 @@ import { useRecoilState } from 'recoil';
 
 import useRequest from '../../lib/hooks/useRequest';
 import { logoutAPI } from '../../lib/apis/auth';
-import { userState } from '../../shared/user';
+import { userState } from '../../store/user';
 
 import Header from '../../components/common/Header';
 import { useHistory } from 'react-router-dom';

@@ -1,1 +1,695 @@
-exports.ids=[1],exports.modules={23:function(n,e,t){"use strict";t.r(e);var r=t(0),a=t.n(r),o=t(43),c=t(3),u=t.n(c),i=t(7),s=t(36),l=t(35),f=t(13),b=t(2),d=t(1),p=t(44),m=t(38),O=t(15),v=t(14),g=t(45),j=t(46),y=function(){var n=Object(d.useHistory)(),e=Object(b.useSetRecoilState)(v.b),t=Object(b.useRecoilState)(p.a),o=Object(f.a)(t,2),c=o[0],y=o[1],w=Object(b.useResetRecoilState)(p.a),E=Object(r.useState)(null),h=Object(f.a)(E,2),x=h[0],k=h[1],S=Object(m.a)(O.b),R=Object(f.a)(S,4),C=R[0],G=(R[1],R[2]),I=R[3],L=Object(r.useCallback)((function(n){var e=n.target,t=e.value,r=e.name;y((function(n){return Object(l.a)({},n,Object(s.a)({},r,t))}))}),[y]);Object(r.useEffect)((function(){w()}),[]),Object(r.useEffect)((function(){G&&(e((function(n){return Object(l.a)({},n,{},G)})),Object(g.a)(G),n.push("/"))}),[n,G]),Object(r.useEffect)((function(){var n;I&&409===(null===(n=I.response)||void 0===n?void 0:n.status)&&k("이미 존재하는 계정입니다.")}),[I,k]);var P=function(){var n=Object(i.a)(u.a.mark((function n(e){var t,r,a,o;return u.a.wrap((function(n){for(;;)switch(n.prev=n.next){case 0:if(k(null),e.preventDefault(),t={username:function(n){if(!/^[a-z0-9-_]{3,16}$/.test(n))return"아이디는 3~16자의 알파벳,숫자,혹은 - _ 으로 이루어져야 합니다."},password:function(n){if(!n)return"패스워드를 입력해주세요."}},r=c.username,a=c.password,!(o=t.username(r)||t.password(a)||null)){n.next=8;break}return k(o),n.abrupt("return");case 8:return n.prev=8,n.next=11,C(r,a);case 11:n.next=17;break;case 13:throw n.prev=13,n.t0=n.catch(8),k("에러 발생!!"),n.t0;case 17:case"end":return n.stop()}}),n,null,[[8,13]])})));return function(e){return n.apply(this,arguments)}}();return(a.a.createElement(j.b,{type:j.a.LOGIN,username:c.username,password:c.password,error:x,onChange:L,onSubmit:P}))};e.default=function(){return a.a.createElement(o.a,null,a.a.createElement(y,null))}},32:function(n,e,t){"use strict";function r(n,e){return e||(e=n.slice(0)),Object.freeze(Object.defineProperties(n,{raw:{value:Object.freeze(e)}}))}t.d(e,"a",(function(){return r}))},33:function(n,e,t){"use strict";e.a={gray:["#f8f9fa","#f1f3f5","#e9ecef","#dee2e6","#ced4da","#adb5bd","#868e96","#495057","#343a40","#212529"],cyan:["#e3fafc","#c5f6fa","#99e9f2","#66d9e8","#3bc9db","#22b8cf","#15aabf","#1098ad","#0c8599","#0b7285"]}},34:function(n,e,t){"use strict";var r=t(32),a=t(0),o=t.n(a),c=t(27),u=t.n(c),i=t(33),s=t(1);function l(){var n=Object(r.a)(["\n  ","\n"]);return l=function(){return n},n}function f(){var n=Object(r.a)(["\n  ","\n"]);return f=function(){return n},n}function b(){var n=Object(r.a)(["\n      background: ",";\n      &:hover {\n        background: ",";\n      }\n    "]);return b=function(){return n},n}function d(){var n=Object(r.a)(["\n      padding-top: 0.75rem;\n      padding-bottom: 0.75rem;\n      width: 100%;\n      font-size: 1.125rem;\n    "]);return d=function(){return n},n}function p(){var n=Object(r.a)(["\n  border: none;\n  border-radius: 4px;\n  font-size: 1rem;\n  font-weight: bold;\n  padding: 0.25rem 1rem;\n  color: white;\n  outline: none;\n  cursor: pointer;\n  background: ",";\n  &:hover {\n    background: ",";\n  }\n  ","\n  ","\n    &:disabled {\n    background: ",";\n    color: ",";\n    cursor: not-allowed;\n  }\n"]);return p=function(){return n},n}e.a=function(n){return n.to?o.a.createElement(v,Object.assign({},n,{to:n.to,cyan:n.cyan?"true":""})):o.a.createElement(O,n)};var m=Object(c.css)(p(),i.a.gray[8],i.a.gray[6],(function(n){return n.fullwidth&&Object(c.css)(d())}),(function(n){return n.cyan&&Object(c.css)(b(),i.a.cyan[5],i.a.cyan[4])}),i.a.gray[3],i.a.gray[5]),O=u.a.button(f(),m),v=u()(s.Link)(l(),m)},35:function(n,e,t){"use strict";t.d(e,"a",(function(){return o}));var r=t(36);function a(n,e){var t=Object.keys(n);if(Object.getOwnPropertySymbols){var r=Object.getOwnPropertySymbols(n);e&&(r=r.filter((function(e){return Object.getOwnPropertyDescriptor(n,e).enumerable}))),t.push.apply(t,r)}return t}function o(n){for(var e=1;e<arguments.length;e++){var t=null!=arguments[e]?arguments[e]:{};e%2?a(Object(t),!0).forEach((function(e){Object(r.a)(n,e,t[e])})):Object.getOwnPropertyDescriptors?Object.defineProperties(n,Object.getOwnPropertyDescriptors(t)):a(Object(t)).forEach((function(e){Object.defineProperty(n,e,Object.getOwnPropertyDescriptor(t,e))}))}return n}},36:function(n,e,t){"use strict";function r(n,e,t){return e in n?Object.defineProperty(n,e,{value:t,enumerable:!0,configurable:!0,writable:!0}):n[e]=t,n}t.d(e,"a",(function(){return r}))},38:function(n,e,t){"use strict";t.d(e,"a",(function(){return i}));var r=t(3),a=t.n(r),o=t(7),c=t(13),u=t(0);function i(n){var e=Object(u.useState)(!1),t=Object(c.a)(e,2),r=t[0],i=t[1],s=Object(u.useState)(null),l=Object(c.a)(s,2),f=l[0],b=l[1],d=Object(u.useState)(null),p=Object(c.a)(d,2),m=p[0],O=p[1];return[Object(u.useCallback)(Object(o.a)(a.a.mark((function e(){var t,r=arguments;return a.a.wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return e.prev=0,i(!0),e.next=4,n.apply(void 0,r);case 4:t=e.sent,b(t.data),e.next=12;break;case 8:throw e.prev=8,e.t0=e.catch(0),O(e.t0),e.t0;case 12:i(!1);case 13:case"end":return e.stop()}}),e,null,[[0,8]])}))),[]),r,f,m,function(){i(!1),b(null),O(null)}]}},43:function(n,e,t){"use strict";var r=t(32),a=t(0),o=t.n(a),c=t(27),u=t.n(c),i=t(33),s=t(1);function l(){var n=Object(r.a)(["\n  .logo-area {\n    display: block;\n    padding-bottom: 2rem;\n    text-align: center;\n    font-weight: bold;\n    letter-spacing: 2px;\n  }\n  box-shadow: 0 0 8px rgba(0, 0, 0, 0.025);\n  padding: 2rem;\n  width: 360px;\n  background: white;\n  border-radius: 2px;\n"]);return l=function(){return n},n}function f(){var n=Object(r.a)(["\n  position: absolute;\n  left: 0;\n  top: 0;\n  bottom: 0;\n  right: 0;\n  background: ",";\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n"]);return f=function(){return n},n}var b=u.a.div(f(),i.a.gray[2]),d=u.a.div(l());e.a=function(n){var e=n.children;return(o.a.createElement(b,null,o.a.createElement(d,null,o.a.createElement("div",{className:"logo-area"},o.a.createElement(s.Link,{to:"/"},"REACTERS")),e)))}},44:function(n,e,t){"use strict";t.d(e,"a",(function(){return o})),t.d(e,"b",(function(){return c}));var r=t(2),a=t(5),o=Object(r.atom)({key:a.a.AUTH_LOGIN_FORM_KEY,default:{username:"",password:""}}),c=Object(r.atom)({key:a.a.AUTH_REGISTER_FROM_KEY,default:{username:"",password:"",passwordConfirm:""}})},45:function(n,e,t){"use strict";t.d(e,"a",(function(){return a}));var r=t(5),a=function(n){var e=JSON.stringify(n);localStorage.setItem(r.b.BLOG_USER_DATA,e)}},46:function(n,e,t){"use strict";t.d(e,"a",(function(){return m}));var r=t(32),a=t(0),o=t.n(a),c=t(27),u=t.n(c),i=t(33),s=t(34),l=t(1);function f(){var n=Object(r.a)(["\n  color: red;\n  text-align: center;\n  font-size: 0.875rem;\n  margin-top: 1rem;\n"]);return f=function(){return n},n}function b(){var n=Object(r.a)(["\n  margin-top: 2rem;\n  text-align: right;\n  a {\n    color: ",";\n    text-decoration: underline;\n    &:hover {\n      color: ",";\n    }\n  }\n"]);return b=function(){return n},n}function d(){var n=Object(r.a)(["\n  font-size: 1rem;\n  border: none;\n  border-bottom: 1px solid ",";\n  padding-bottom: 0.5rem;\n  outline: none;\n  width: 100%;\n  &:focus {\n    color: ",";\n    border-bottom: 1px solid ",";\n  }\n\n  & + & {\n    margin-top: 1rem;\n  }\n"]);return d=function(){return n},n}function p(){var n=Object(r.a)(["\n  h3 {\n    margin: 0;\n    color: ",";\n    margin-bottom: 1rem;\n  }\n\n  button {\n    margin-top: 1rem;\n  }\n"]);return p=function(){return n},n}var m,O={LOGIN:"로그인",REGISTER:"회원가입"};!function(n){n.LOGIN="LOGIN",n.REGISTER="REGISTER"}(m||(m={}));var v=u.a.div(p(),i.a.gray[8]),g=u.a.input(d(),i.a.gray[5],i.a.cyan[7],i.a.gray[7]),j=u.a.div(b(),i.a.gray[6],i.a.gray[9]),y=u.a.div(f());e.b=function(n){var e=n.type,t=n.password,r=n.username,a=n.passwordConfirm,c=n.error,u=n.onChange,i=n.onSubmit,f=O[e];return o.a.createElement(v,null,o.a.createElement("h3",null,f),o.a.createElement("form",{onSubmit:i},o.a.createElement(g,{autoComplete:"username",name:"username",placeholder:"아이디",value:r,onChange:u}),o.a.createElement(g,{type:"password",autoComplete:"new-password",name:"password",placeholder:"비밀번호",value:t,onChange:u}),e===m.REGISTER&&o.a.createElement(g,{type:"password",autoComplete:"new-password",name:"passwordConfirm",placeholder:"비밀번호 확인",value:a,onChange:u}),c&&o.a.createElement(y,null,c),o.a.createElement(s.a,{cyan:!0,fullwidth:!0},f)),o.a.createElement(j,null,e===m.LOGIN?o.a.createElement(l.Link,{to:"/register"},"회원가입"):o.a.createElement(l.Link,{to:"/login"},"로그인")))}}};
+exports.ids = [1];
+exports.modules = {
+
+/***/ 25:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
+
+// EXTERNAL MODULE: external "react"
+var external_react_ = __webpack_require__(0);
+var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
+
+// EXTERNAL MODULE: ./src/components/auth/AuthTemplate.tsx
+var AuthTemplate = __webpack_require__(43);
+
+// EXTERNAL MODULE: ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/regenerator/index.js
+var regenerator = __webpack_require__(2);
+var regenerator_default = /*#__PURE__*/__webpack_require__.n(regenerator);
+
+// EXTERNAL MODULE: ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js
+var asyncToGenerator = __webpack_require__(4);
+
+// EXTERNAL MODULE: ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/defineProperty.js
+var defineProperty = __webpack_require__(36);
+
+// EXTERNAL MODULE: ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/objectSpread2.js
+var objectSpread2 = __webpack_require__(35);
+
+// EXTERNAL MODULE: ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/slicedToArray.js + 3 modules
+var slicedToArray = __webpack_require__(14);
+
+// EXTERNAL MODULE: external "recoil"
+var external_recoil_ = __webpack_require__(3);
+
+// EXTERNAL MODULE: external "react-router-dom"
+var external_react_router_dom_ = __webpack_require__(1);
+
+// EXTERNAL MODULE: ./src/store/auth.ts
+var auth = __webpack_require__(44);
+
+// EXTERNAL MODULE: ./src/lib/hooks/useRequest.tsx
+var useRequest = __webpack_require__(38);
+
+// EXTERNAL MODULE: ./src/lib/apis/auth.ts
+var apis_auth = __webpack_require__(16);
+
+// EXTERNAL MODULE: ./src/store/user.ts
+var user = __webpack_require__(15);
+
+// EXTERNAL MODULE: ./src/lib/utils.ts
+var utils = __webpack_require__(45);
+
+// EXTERNAL MODULE: ./src/components/auth/AuthForm.tsx
+var AuthForm = __webpack_require__(46);
+
+// CONCATENATED MODULE: ./src/containers/auth/LoginForm.tsx
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var LoginForm_LoginForm = function LoginForm() {
+  var history = Object(external_react_router_dom_["useHistory"])();
+  var setUserData = Object(external_recoil_["useSetRecoilState"])(user["b" /* userState */]);
+
+  var _useRecoilState = Object(external_recoil_["useRecoilState"])(auth["a" /* loginFormState */]),
+      _useRecoilState2 = Object(slicedToArray["a" /* default */])(_useRecoilState, 2),
+      form = _useRecoilState2[0],
+      setForm = _useRecoilState2[1];
+
+  var resetLoginForm = Object(external_recoil_["useResetRecoilState"])(auth["a" /* loginFormState */]);
+
+  var _useState = Object(external_react_["useState"])(null),
+      _useState2 = Object(slicedToArray["a" /* default */])(_useState, 2),
+      error = _useState2[0],
+      setError = _useState2[1];
+
+  var _useRequest = Object(useRequest["a" /* default */])(apis_auth["b" /* loginAPI */]),
+      _useRequest2 = Object(slicedToArray["a" /* default */])(_useRequest, 4),
+      _login = _useRequest2[0],
+      _ = _useRequest2[1],
+      userData = _useRequest2[2],
+      userError = _useRequest2[3];
+
+  var onChange = Object(external_react_["useCallback"])(function (e) {
+    var _e$target = e.target,
+        value = _e$target.value,
+        name = _e$target.name;
+    setForm(function (oldForm) {
+      return Object(objectSpread2["a" /* default */])({}, oldForm, Object(defineProperty["a" /* default */])({}, name, value));
+    });
+  }, [setForm]);
+  Object(external_react_["useEffect"])(function () {
+    resetLoginForm(); // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+  Object(external_react_["useEffect"])(function () {
+    if (userData) {
+      setUserData(function (oldUserData) {
+        return Object(objectSpread2["a" /* default */])({}, oldUserData, {}, userData);
+      });
+      Object(utils["a" /* saveUserData */])(userData);
+      history.push('/');
+    } // eslint-disable-next-line react-hooks/exhaustive-deps
+
+  }, [history, userData]);
+  Object(external_react_["useEffect"])(function () {
+    var _userError$response;
+
+    if (userError && ((_userError$response = userError.response) === null || _userError$response === void 0 ? void 0 : _userError$response.status) === 409) {
+      setError('이미 존재하는 계정입니다.');
+      return;
+    }
+  }, [userError, setError]);
+
+  var onSubmit = /*#__PURE__*/function () {
+    var _ref = Object(asyncToGenerator["a" /* default */])( /*#__PURE__*/regenerator_default.a.mark(function _callee(e) {
+      var validation, username, password, error;
+      return regenerator_default.a.wrap(function _callee$(_context) {
+        while (1) {
+          switch (_context.prev = _context.next) {
+            case 0:
+              setError(null);
+              e.preventDefault();
+              validation = {
+                username: function username(text) {
+                  if (!/^[a-z0-9-_]{3,16}$/.test(text)) {
+                    return '아이디는 3~16자의 알파벳,숫자,혹은 - _ 으로 이루어져야 합니다.';
+                  }
+                },
+                password: function password(text) {
+                  if (!text) {
+                    return '패스워드를 입력해주세요.';
+                  }
+                }
+              };
+              username = form.username, password = form.password;
+              error = validation.username(username) || validation.password(password) || null;
+
+              if (!error) {
+                _context.next = 8;
+                break;
+              }
+
+              setError(error);
+              return _context.abrupt("return");
+
+            case 8:
+              _context.prev = 8;
+              _context.next = 11;
+              return _login(username, password);
+
+            case 11:
+              _context.next = 17;
+              break;
+
+            case 13:
+              _context.prev = 13;
+              _context.t0 = _context["catch"](8);
+              setError('에러 발생!!');
+              throw _context.t0;
+
+            case 17:
+            case "end":
+              return _context.stop();
+          }
+        }
+      }, _callee, null, [[8, 13]]);
+    }));
+
+    return function onSubmit(_x) {
+      return _ref.apply(this, arguments);
+    };
+  }();
+
+  return /*#__PURE__*/external_react_default.a.createElement(AuthForm["b" /* default */], {
+    type: AuthForm["a" /* AuthFormType */].LOGIN,
+    username: form.username,
+    password: form.password,
+    error: error,
+    onChange: onChange,
+    onSubmit: onSubmit
+  });
+};
+
+/* harmony default export */ var auth_LoginForm = (LoginForm_LoginForm);
+// CONCATENATED MODULE: ./src/pages/LoginPage.tsx
+
+
+
+
+var LoginPage_LoginPage = function LoginPage() {
+  return /*#__PURE__*/external_react_default.a.createElement(AuthTemplate["a" /* default */], null, /*#__PURE__*/external_react_default.a.createElement(auth_LoginForm, null));
+};
+
+/* harmony default export */ var pages_LoginPage = __webpack_exports__["default"] = (LoginPage_LoginPage);
+
+/***/ }),
+
+/***/ 32:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _taggedTemplateLiteral; });
+function _taggedTemplateLiteral(strings, raw) {
+  if (!raw) {
+    raw = strings.slice(0);
+  }
+
+  return Object.freeze(Object.defineProperties(strings, {
+    raw: {
+      value: Object.freeze(raw)
+    }
+  }));
+}
+
+/***/ }),
+
+/***/ 33:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+var palette = {
+  gray: ['#f8f9fa', '#f1f3f5', '#e9ecef', '#dee2e6', '#ced4da', '#adb5bd', '#868e96', '#495057', '#343a40', '#212529'],
+  cyan: ['#e3fafc', '#c5f6fa', '#99e9f2', '#66d9e8', '#3bc9db', '#22b8cf', '#15aabf', '#1098ad', '#0c8599', '#0b7285']
+};
+/* harmony default export */ __webpack_exports__["a"] = (palette);
+
+/***/ }),
+
+/***/ 34:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var _Users_ominseob_Project_ReactProject_blog_blog_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(32);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(0);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(9);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _lib_styles_palette__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(33);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(1);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_router_dom__WEBPACK_IMPORTED_MODULE_4__);
+
+
+function _templateObject5() {
+  var data = Object(_Users_ominseob_Project_ReactProject_blog_blog_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(["\n  ", "\n"]);
+
+  _templateObject5 = function _templateObject5() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject4() {
+  var data = Object(_Users_ominseob_Project_ReactProject_blog_blog_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(["\n  ", "\n"]);
+
+  _templateObject4 = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject3() {
+  var data = Object(_Users_ominseob_Project_ReactProject_blog_blog_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(["\n      background: ", ";\n      &:hover {\n        background: ", ";\n      }\n    "]);
+
+  _templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject2() {
+  var data = Object(_Users_ominseob_Project_ReactProject_blog_blog_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(["\n      padding-top: 0.75rem;\n      padding-bottom: 0.75rem;\n      width: 100%;\n      font-size: 1.125rem;\n    "]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject() {
+  var data = Object(_Users_ominseob_Project_ReactProject_blog_blog_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(["\n  border: none;\n  border-radius: 4px;\n  font-size: 1rem;\n  font-weight: bold;\n  padding: 0.25rem 1rem;\n  color: white;\n  outline: none;\n  cursor: pointer;\n  background: ", ";\n  &:hover {\n    background: ", ";\n  }\n  ", "\n  ", "\n    &:disabled {\n    background: ", ";\n    color: ", ";\n    cursor: not-allowed;\n  }\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+
+
+
+
+
+var Button = function Button(props) {
+  return props.to ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(StyledLink, Object.assign({}, props, {
+    to: props.to,
+    cyan: props.cyan ? 'true' : ''
+  })) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(StyledButton, props);
+};
+
+/* harmony default export */ __webpack_exports__["a"] = (Button);
+var buttonStyle = Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["css"])(_templateObject(), _lib_styles_palette__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"].gray[8], _lib_styles_palette__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"].gray[6], function (props) {
+  return props.fullwidth && Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["css"])(_templateObject2());
+}, function (props) {
+  return props.cyan && Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["css"])(_templateObject3(), _lib_styles_palette__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"].cyan[5], _lib_styles_palette__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"].cyan[4]);
+}, _lib_styles_palette__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"].gray[3], _lib_styles_palette__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"].gray[5]);
+var StyledButton = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.button(_templateObject4(), buttonStyle);
+var StyledLink = styled_components__WEBPACK_IMPORTED_MODULE_2___default()(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Link"])(_templateObject5(), buttonStyle);
+
+/***/ }),
+
+/***/ 35:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _objectSpread2; });
+/* harmony import */ var _defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(36);
+
+
+function ownKeys(object, enumerableOnly) {
+  var keys = Object.keys(object);
+
+  if (Object.getOwnPropertySymbols) {
+    var symbols = Object.getOwnPropertySymbols(object);
+    if (enumerableOnly) symbols = symbols.filter(function (sym) {
+      return Object.getOwnPropertyDescriptor(object, sym).enumerable;
+    });
+    keys.push.apply(keys, symbols);
+  }
+
+  return keys;
+}
+
+function _objectSpread2(target) {
+  for (var i = 1; i < arguments.length; i++) {
+    var source = arguments[i] != null ? arguments[i] : {};
+
+    if (i % 2) {
+      ownKeys(Object(source), true).forEach(function (key) {
+        Object(_defineProperty__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(target, key, source[key]);
+      });
+    } else if (Object.getOwnPropertyDescriptors) {
+      Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
+    } else {
+      ownKeys(Object(source)).forEach(function (key) {
+        Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
+      });
+    }
+  }
+
+  return target;
+}
+
+/***/ }),
+
+/***/ 36:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _defineProperty; });
+function _defineProperty(obj, key, value) {
+  if (key in obj) {
+    Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+  } else {
+    obj[key] = value;
+  }
+
+  return obj;
+}
+
+/***/ }),
+
+/***/ 38:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return useRequest; });
+/* harmony import */ var _Users_ominseob_Project_ReactProject_blog_blog_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
+/* harmony import */ var _Users_ominseob_Project_ReactProject_blog_blog_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_Users_ominseob_Project_ReactProject_blog_blog_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Users_ominseob_Project_ReactProject_blog_blog_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(4);
+/* harmony import */ var _Users_ominseob_Project_ReactProject_blog_blog_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(14);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(0);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
+
+
+
+
+function useRequest(promiseCreator) {
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])(false),
+      _useState2 = Object(_Users_ominseob_Project_ReactProject_blog_blog_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"])(_useState, 2),
+      loading = _useState2[0],
+      setLoading = _useState2[1];
+
+  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])(null),
+      _useState4 = Object(_Users_ominseob_Project_ReactProject_blog_blog_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"])(_useState3, 2),
+      data = _useState4[0],
+      setData = _useState4[1];
+
+  var _useState5 = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])(null),
+      _useState6 = Object(_Users_ominseob_Project_ReactProject_blog_blog_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"])(_useState5, 2),
+      error = _useState6[0],
+      setError = _useState6[1];
+
+  var onRequest = Object(react__WEBPACK_IMPORTED_MODULE_3__["useCallback"])( /*#__PURE__*/Object(_Users_ominseob_Project_ReactProject_blog_blog_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"])( /*#__PURE__*/_Users_ominseob_Project_ReactProject_blog_blog_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
+    var response,
+        _args = arguments;
+    return _Users_ominseob_Project_ReactProject_blog_blog_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
+      while (1) {
+        switch (_context.prev = _context.next) {
+          case 0:
+            _context.prev = 0;
+            setLoading(true);
+            _context.next = 4;
+            return promiseCreator.apply(void 0, _args);
+
+          case 4:
+            response = _context.sent;
+            setData(response.data);
+            _context.next = 12;
+            break;
+
+          case 8:
+            _context.prev = 8;
+            _context.t0 = _context["catch"](0);
+            setError(_context.t0);
+            throw _context.t0;
+
+          case 12:
+            setLoading(false);
+
+          case 13:
+          case "end":
+            return _context.stop();
+        }
+      }
+    }, _callee, null, [[0, 8]]);
+  })), // eslint-disable-next-line react-hooks/exhaustive-deps
+  []);
+
+  var onReset = function onReset() {
+    setLoading(false);
+    setData(null);
+    setError(null);
+  };
+
+  return [onRequest, loading, data, error, onReset];
+}
+
+/***/ }),
+
+/***/ 43:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var _Users_ominseob_Project_ReactProject_blog_blog_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(32);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(0);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(9);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _lib_styles_palette__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(33);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(1);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_router_dom__WEBPACK_IMPORTED_MODULE_4__);
+
+
+function _templateObject2() {
+  var data = Object(_Users_ominseob_Project_ReactProject_blog_blog_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(["\n  .logo-area {\n    display: block;\n    padding-bottom: 2rem;\n    text-align: center;\n    font-weight: bold;\n    letter-spacing: 2px;\n  }\n  box-shadow: 0 0 8px rgba(0, 0, 0, 0.025);\n  padding: 2rem;\n  width: 360px;\n  background: white;\n  border-radius: 2px;\n"]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject() {
+  var data = Object(_Users_ominseob_Project_ReactProject_blog_blog_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(["\n  position: absolute;\n  left: 0;\n  top: 0;\n  bottom: 0;\n  right: 0;\n  background: ", ";\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+
+
+
+
+
+var AuthTemplate = function AuthTemplate(_ref) {
+  var children = _ref.children;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(AuthTemplateBlock, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(WhiteBox, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "logo-area"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Link"], {
+    to: "/"
+  }, "REACTERS")), children));
+};
+
+var AuthTemplateBlock = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div(_templateObject(), _lib_styles_palette__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"].gray[2]);
+var WhiteBox = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div(_templateObject2());
+/* harmony default export */ __webpack_exports__["a"] = (AuthTemplate);
+
+/***/ }),
+
+/***/ 44:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* unused harmony export LoginFormInitState */
+/* unused harmony export RegisterFormInitState */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return loginFormState; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return registerFormState; });
+/* harmony import */ var recoil__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3);
+/* harmony import */ var recoil__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(recoil__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _lib_contants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6);
+
+
+var LoginFormInitState = {
+  username: '',
+  password: ''
+};
+var RegisterFormInitState = {
+  username: '',
+  password: '',
+  passwordConfirm: ''
+};
+var loginFormState = Object(recoil__WEBPACK_IMPORTED_MODULE_0__["atom"])({
+  key: _lib_contants__WEBPACK_IMPORTED_MODULE_1__[/* RECOIL_KEY */ "a"].AUTH_LOGIN_FORM_KEY,
+  default: LoginFormInitState
+});
+var registerFormState = Object(recoil__WEBPACK_IMPORTED_MODULE_0__["atom"])({
+  key: _lib_contants__WEBPACK_IMPORTED_MODULE_1__[/* RECOIL_KEY */ "a"].AUTH_REGISTER_FROM_KEY,
+  default: RegisterFormInitState
+});
+
+/***/ }),
+
+/***/ 45:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return saveUserData; });
+/* harmony import */ var _contants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6);
+
+var saveUserData = function saveUserData(userData) {
+  var stringObj = JSON.stringify(userData);
+  localStorage.setItem(_contants__WEBPACK_IMPORTED_MODULE_0__[/* STORAGE_KEY */ "b"].BLOG_USER_DATA, stringObj);
+};
+
+/***/ }),
+
+/***/ 46:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AuthFormType; });
+/* harmony import */ var _Users_ominseob_Project_ReactProject_blog_blog_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(32);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(0);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(9);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _lib_styles_palette__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(33);
+/* harmony import */ var _common_Button__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(34);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(1);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_router_dom__WEBPACK_IMPORTED_MODULE_5__);
+
+
+function _templateObject4() {
+  var data = Object(_Users_ominseob_Project_ReactProject_blog_blog_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(["\n  color: red;\n  text-align: center;\n  font-size: 0.875rem;\n  margin-top: 1rem;\n"]);
+
+  _templateObject4 = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject3() {
+  var data = Object(_Users_ominseob_Project_ReactProject_blog_blog_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(["\n  margin-top: 2rem;\n  text-align: right;\n  a {\n    color: ", ";\n    text-decoration: underline;\n    &:hover {\n      color: ", ";\n    }\n  }\n"]);
+
+  _templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject2() {
+  var data = Object(_Users_ominseob_Project_ReactProject_blog_blog_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(["\n  font-size: 1rem;\n  border: none;\n  border-bottom: 1px solid ", ";\n  padding-bottom: 0.5rem;\n  outline: none;\n  width: 100%;\n  &:focus {\n    color: ", ";\n    border-bottom: 1px solid ", ";\n  }\n\n  & + & {\n    margin-top: 1rem;\n  }\n"]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject() {
+  var data = Object(_Users_ominseob_Project_ReactProject_blog_blog_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])(["\n  h3 {\n    margin: 0;\n    color: ", ";\n    margin-bottom: 1rem;\n  }\n\n  button {\n    margin-top: 1rem;\n  }\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+
+
+
+
+
+var TITLE_MAP = {
+  LOGIN: '로그인',
+  REGISTER: '회원가입'
+};
+var AuthFormType;
+
+(function (AuthFormType) {
+  AuthFormType["LOGIN"] = "LOGIN";
+  AuthFormType["REGISTER"] = "REGISTER";
+})(AuthFormType || (AuthFormType = {}));
+
+var AuthForm = function AuthForm(_ref) {
+  var type = _ref.type,
+      password = _ref.password,
+      username = _ref.username,
+      passwordConfirm = _ref.passwordConfirm,
+      error = _ref.error,
+      onChange = _ref.onChange,
+      onSubmit = _ref.onSubmit;
+  var title = TITLE_MAP[type];
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(AuthFormBlock, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", null, title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("form", {
+    onSubmit: onSubmit
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(StyledInput, {
+    autoComplete: "username",
+    name: "username",
+    placeholder: "\uC544\uC774\uB514",
+    value: username,
+    onChange: onChange
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(StyledInput, {
+    type: "password",
+    autoComplete: "new-password",
+    name: "password",
+    placeholder: "\uBE44\uBC00\uBC88\uD638",
+    value: password,
+    onChange: onChange
+  }), type === AuthFormType.REGISTER && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(StyledInput, {
+    type: "password",
+    autoComplete: "new-password",
+    name: "passwordConfirm",
+    placeholder: "\uBE44\uBC00\uBC88\uD638 \uD655\uC778",
+    value: passwordConfirm,
+    onChange: onChange
+  }), error && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ErrorMessage, null, error), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_common_Button__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"], {
+    cyan: true,
+    fullwidth: true
+  }, title)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Footer, null, type === AuthFormType.LOGIN ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__["Link"], {
+    to: "/register"
+  }, "\uD68C\uC6D0\uAC00\uC785") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__["Link"], {
+    to: "/login"
+  }, "\uB85C\uADF8\uC778")));
+};
+
+var AuthFormBlock = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div(_templateObject(), _lib_styles_palette__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"].gray[8]);
+var StyledInput = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.input(_templateObject2(), _lib_styles_palette__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"].gray[5], _lib_styles_palette__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"].cyan[7], _lib_styles_palette__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"].gray[7]);
+var Footer = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div(_templateObject3(), _lib_styles_palette__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"].gray[6], _lib_styles_palette__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"].gray[9]);
+var ErrorMessage = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div(_templateObject4());
+/* harmony default export */ __webpack_exports__["b"] = (AuthForm);
+
+/***/ })
+
+};;

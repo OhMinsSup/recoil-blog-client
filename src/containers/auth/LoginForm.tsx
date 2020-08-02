@@ -2,10 +2,10 @@ import React, { useCallback, useEffect, useState } from 'react';
 import { useRecoilState, useSetRecoilState, useResetRecoilState } from 'recoil';
 import { useHistory } from 'react-router-dom';
 
-import { loginFormState } from '../../shared/auth';
+import { loginFormState } from '../../store/auth';
 import useRequest from '../../lib/hooks/useRequest';
 import { loginAPI } from '../../lib/apis/auth';
-import { userState } from '../../shared/user';
+import { userState } from '../../store/user';
 import { saveUserData } from '../../lib/utils';
 
 import AuthForm, { AuthFormType } from '../../components/auth/AuthForm';

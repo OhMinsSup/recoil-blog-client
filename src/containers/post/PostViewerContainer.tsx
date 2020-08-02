@@ -6,8 +6,8 @@ import {
   useRecoilValue,
 } from 'recoil';
 
-import { userState } from '../../shared/user';
-import { postState, readPostQuery, editorFormState } from '../../shared/post';
+import { userState } from '../../store/user';
+import { postState, readPostQuery, editorFormState } from '../../store/post';
 import { removePostAPI } from '../../lib/apis/post';
 
 import PostViewer from '../../components/post/PostViewer';

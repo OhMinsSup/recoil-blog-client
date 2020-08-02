@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useRecoilStateLoadable } from 'recoil';
 import { match } from 'react-router-dom';
 
-import { readPostQuery } from '../../shared/post';
+import { readPostQuery } from '../../store/post';
 
 import EditorContainer from './EditorContainer';
 import TagBoxContainer from './TagBoxContainer';

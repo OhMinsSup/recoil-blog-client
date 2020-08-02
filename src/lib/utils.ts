@@ -1,5 +1,5 @@
 import { STORAGE_KEY } from './contants';
-import { UserData } from '../shared/user';
+import { UserData } from '../store/user';
 
 export const saveUserData = (userData: UserData) => {
   const stringObj = JSON.stringify(userData);

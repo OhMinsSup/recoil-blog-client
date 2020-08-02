@@ -3,8 +3,8 @@ import qs from 'qs';
 import { match, useLocation } from 'react-router-dom';
 import { useRecoilStateLoadable, useRecoilState } from 'recoil';
 
-import { listPostsQuery } from '../../shared/posts';
-import { userState } from '../../shared/user';
+import { listPostsQuery } from '../../store/posts';
+import { userState } from '../../store/user';
 
 import PostList from '../../components/posts/PostList';
 import PostListError from '../../components/posts/PostListError';

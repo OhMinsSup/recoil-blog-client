@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import Responsive from './Responsive';
 import Button from './Button';
 
-import { UserData } from '../../shared/user';
+import { UserData } from '../../store/user';
 
 interface HeaderProps {
   user: UserData | null;

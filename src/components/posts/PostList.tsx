@@ -7,8 +7,8 @@ import Button from '../common/Button';
 import SubInfo from '../common/SubInfo';
 import Tags from '../common/Tags';
 
-import { UserData } from '../../shared/user';
-import { PostData } from '../../shared/post';
+import { UserData } from '../../store/user';
+import { PostData } from '../../store/post';
 
 import palette from '../../lib/styles/palette';
 

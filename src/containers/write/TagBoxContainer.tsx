@@ -1,7 +1,7 @@
 import React, { useCallback } from 'react';
 import { useRecoilState } from 'recoil';
 
-import { editorFormState } from '../../shared/post';
+import { editorFormState } from '../../store/post';
 
 import TagBox from '../../components/write/TagBox';
 

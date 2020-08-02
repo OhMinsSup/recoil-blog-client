@@ -1,5 +1,5 @@
 import apiClient from './apiClient';
-import { UserData } from '../../shared/user';
+import { UserData } from '../../store/user';
 
 export const loginAPI = (username: string, password: string) =>
   apiClient.post<UserData>('/api/auth/login', {

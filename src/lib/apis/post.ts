@@ -1,6 +1,6 @@
 import apiClient from './apiClient';
 import qs from 'qs';
-import { PostData } from '../../shared/post';
+import { PostData } from '../../store/post';
 
 export type WritePostParams = {
   title: string;

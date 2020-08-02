@@ -3,7 +3,7 @@ import qs from 'qs';
 import { useRecoilValue } from 'recoil';
 import { match, useLocation } from 'react-router-dom';
 
-import { paginationState, postsState } from '../../shared/posts';
+import { paginationState, postsState } from '../../store/posts';
 
 import Pagination from '../../components/posts/Pagination';
 

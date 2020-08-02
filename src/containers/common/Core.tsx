@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useRecoilStateLoadable } from 'recoil';
 
-import { userQuery } from '../../shared/user';
+import { userQuery } from '../../store/user';
 
 import { STORAGE_KEY } from '../../lib/contants';
 

@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect } from 'react';
 import { useRecoilState, useResetRecoilState } from 'recoil';
 
-import { editorFormState } from '../../shared/post';
+import { editorFormState } from '../../store/post';
 
 import Editor from '../../components/write/Editor';
 

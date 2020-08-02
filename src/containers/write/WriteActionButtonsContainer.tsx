@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useRecoilState } from 'recoil';
 import { useHistory } from 'react-router-dom';
 
-import { PostData, postState, editorFormState } from '../../shared/post';
+import { PostData, postState, editorFormState } from '../../store/post';
 import { writePostAPI, updatePostAPI } from '../../lib/apis/post';
 import useRequest from '../../lib/hooks/useRequest';
 

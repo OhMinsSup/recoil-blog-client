@@ -2,8 +2,8 @@ import React, { useCallback, useEffect, useState } from 'react';
 import { useRecoilState, useSetRecoilState, useResetRecoilState } from 'recoil';
 import { useHistory } from 'react-router-dom';
 
-import { registerFormState } from '../../shared/auth';
-import { userState } from '../../shared/user';
+import { registerFormState } from '../../store/auth';
+import { userState } from '../../store/user';
 import { registerAPI } from '../../lib/apis/auth';
 import { saveUserData } from '../../lib/utils';
 import useRequest from '../../lib/hooks/useRequest';
